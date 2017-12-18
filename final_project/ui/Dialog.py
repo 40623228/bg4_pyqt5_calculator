@@ -24,7 +24,7 @@ class Dialog(QDialog, Ui_Dialog):
         super(Dialog, self).__init__(parent)
         self.setupUi(self)
         '''以下為使用者自行編寫程式碼區'''
-
+    self.one.clicked.connect(self.digitClicked)
     def digitClicked(self):
         '''
         使用者按下數字鍵, 必須能夠累積顯示該數字
