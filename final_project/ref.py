@@ -100,7 +100,6 @@ class Dialog(QDialog, Ui_Dialog):
         self.display.setText(self.display.text() + str(digitValue))
  
     def additiveOperatorClicked(self):
-#40623228
         # 確定按下加或減
         clickedButton = self.sender()
         # 確定運算子, 為加或減
