@@ -160,16 +160,25 @@ class Dialog(QDialog, Ui_Dialog):
     def abortOperation(self):
 #40623220        
         '''中斷運算'''
-        pass
-        
-    def calculate(self):
+      #  pass
+        self.clearAll()
+        self.display.setText("erro")
+    def calculate(self, rightOperand, pendingOperator):
 #40623220
         '''計算'''
         #pass
-        self.clearAll()
-        self.display.setText("erro")
-        
-        
-        
-        
-        
+        if pendingOperator == "+":
+            self.sumSoFar += rightOperand
+ 
+        elif pendingOperator == "-":
+            self.sumSoFar -= rightOperand
+        elif pendingOperator == "*":
+            self.factorSoFar *= rightOperand
+ 
+        elif pendingOperator == "/":
+            if rightOperand == 0.0:
+                return False
+ 
+            self.factorSoFar /= rightOperand
+ 
+        return True
