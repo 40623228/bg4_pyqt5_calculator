@@ -60,7 +60,6 @@
 <t tx="40323230.20170123213451.1">@language python
 filename = "report"
 import os, platform
-import chapter
 # 更換目錄到 markdown 
 os.chdir("./../markdown")
 
@@ -103,12 +102,12 @@ category_zh: '計算機程式 bg1 期末報告'
 title_zh: 'PyQt5 事件導向計算器'
 title_en: 'PyQt5 Event-Driven Calculator Project'
 author:
-- 設計二乙 1731001 XXX
-- 設計二乙 1731001 XXX
-- 設計二乙 1731001 XXX
-- 設計二乙 1731002 XXX
-- 設計二乙 1731002 XXX
-
+- 設計一乙 40623219 XXX
+- 設計一乙 40623220 XXX
+- 設計一乙 40623221 XXX
+- 設計一乙 40623228 陳永錩
+- 設計一乙 40623229 XXX
+- 設計一乙 40623229 XXX
 advisor_zh: '嚴家銘'
 date: '2017.12.18'
 ---

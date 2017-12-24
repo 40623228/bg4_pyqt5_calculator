@@ -24,7 +24,28 @@ class Dialog(QDialog, Ui_Dialog):
         super(Dialog, self).__init__(parent)
         self.setupUi(self)
         '''以下為使用者自行編寫程式碼區'''
-
+        
+        self.display.setText('0') 
+        
+        num_button = [self.one,  self.two,  \
+        self.three,  self.four,  self.five,  self.six,  self.seven,  self.eight,  self.nine,  self.zero]
+       
+        for i in num_button:
+            i.clicked.connect(self.digitClicked)
+       
+        self.waitingForOperand = True
+        
+        multiply_divide = [self.timesButton,  self.divisionButton]
+        
+        self.pendingMultiplicativeOperator = ''
+        
+        self.factorSoFar = 0.0
+        
+        for i in multiply_divide:
+            i.clicked.connect(self.multiplicativeOperatorClicked)  
+           
+         
+        
     def digitClicked(self):
 #40623228
         '''
@@ -32,7 +53,16 @@ class Dialog(QDialog, Ui_Dialog):
         當顯示幕已經為 0, 再按零不會顯示 00, 而仍顯示 0 或 0.0
         
         '''
-        pass
+        #pass
+        clickedButton = self.sender()
+        digitValue = int(clickedButton.text())
+        if self.display.text() == '0' and digitValue == 0.0:
+            return
+        if self.waitingForOperand:
+            self.display.clear()
+            self.waitingForOperand = False
+        self.display.setText(self.display.text() + str(digitValue))
+ 
         
     def unaryOperatorClicked(self):
 #40623221
@@ -47,7 +77,24 @@ class Dialog(QDialog, Ui_Dialog):
     def multiplicativeOperatorClicked(self):
 #40623220
         '''乘或除按下後進行的處理方法'''
-        pass
+       # pass
+        clickedButton = self.sender()
+        clickedOperator = clickedButton.text()
+        operand = float(self.display.text())
+        
+        if self.pendingMultiplicativeOperator:
+            if not self.calculate(operand, self.pendingMultiplicativeOperator):
+                self.abortOperation()
+                return
+       
+            self.display.setText(str(self.factorSoFar))
+        else:
+            self.factorSoFar = operand
+ 
+        # 能夠重複按下乘或除, 以目前的運算數值執行重複運算
+        self.pendingMultiplicativeOperator = clickedOperator
+        self.waitingForOperand = True
+       
         
     def equalClicked(self):
 #40623228
@@ -62,7 +109,14 @@ class Dialog(QDialog, Ui_Dialog):
     def changeSignClicked(self):
 #40623220        
         '''變號鍵按下後的處理方法'''
-        pass
+        #pass
+        text = self.display.text()
+        value = float(text)
+ 
+        if value > 0.0:
+            text = "-" + text
+        elif value < 0.0:
+            text = text[1:]
         
     def backspaceClicked(self):
 #40623229
@@ -111,4 +165,11 @@ class Dialog(QDialog, Ui_Dialog):
     def calculate(self):
 #40623220
         '''計算'''
-        pass
+        #pass
+        self.clearAll()
+        self.display.setText("erro")
+        
+        
+        
+        
+        
