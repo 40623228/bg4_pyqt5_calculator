@@ -81,6 +81,8 @@ class Dialog(QDialog, Ui_Dialog):
         clickedButton = self.sender()
         clickedOperator = clickedButton.text()
         operand = float(self.display.text())
+        self.pendingMultiplicativeOperator = clickedOperator
+        self.waitingForOperand = True
         
         if self.pendingMultiplicativeOperator:
             if not self.calculate(operand, self.pendingMultiplicativeOperator):
@@ -91,9 +93,7 @@ class Dialog(QDialog, Ui_Dialog):
         else:
             self.factorSoFar = operand
  
-        # 能夠重複按下乘或除, 以目前的運算數值執行重複運算
-        self.pendingMultiplicativeOperator = clickedOperator
-        self.waitingForOperand = True
+        
        
         
     def equalClicked(self):
@@ -117,6 +117,8 @@ class Dialog(QDialog, Ui_Dialog):
             text = "-" + text
         elif value < 0.0:
             text = text[1:]
+            
+        self.display.setText(text)
         
     def backspaceClicked(self):
 #40623229
