@@ -73,6 +73,8 @@ class Dialog(QDialog, Ui_Dialog):
 #40623229
         '''加或減按下後進行的處理方法'''
         pass
+        for i in plus_minus:
+            i.clicked.connect(self.additiveOperatorClicked)
         
     def multiplicativeOperatorClicked(self):
 #40623220
@@ -122,11 +124,13 @@ class Dialog(QDialog, Ui_Dialog):
 #40623229
         '''回復鍵按下的處理方法'''
         pass
-        
+        if self.waitingForOperand:
+            return
     def clear(self):
 #40623229
         '''清除鍵按下後的處理方法'''
         pass
+        self.clearButton.clicked.connect(self.clear)
         
     def clearAll(self):
 #40623221
