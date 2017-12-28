@@ -43,7 +43,6 @@ class Dialog(QDialog, Ui_Dialog):
         self.factorSoFar = 0.0
         
         for i in multiply_divide:
-<<<<<<< HEAD
             i.clicked.connect(self.multiplicativeOperatorClicked)  
         
         
@@ -51,18 +50,19 @@ class Dialog(QDialog, Ui_Dialog):
         for i in plus_minus:
             i.clicked.connect(self.additiveOperatorClicked)
  
-=======
             i.clicked.connect(self.multiplicativeOperatorClicked)
           
         self.pointButton.clicked.connect(self.pointClicked)  
->>>>>>> 52b6f257faad14b877d34e7082949c45ad5f08e9
            
         self.clearAllButton.clicked.connect(self.clearAll)
          
         unaryOperator = [self.squareRootButton, self.powerButton,  self.reciprocalButton ]
         for i in unaryOperator:
             i.clicked.connect(self.unaryOperatorClicked)
-       
+            
+        self.clearButton.clicked.connect(self.clear)
+        
+        self.backspaceButton.clicked.connect(self.backspaceClicked)
         
     def digitClicked(self):
 #40623228
@@ -138,39 +138,44 @@ class Dialog(QDialog, Ui_Dialog):
     def additiveOperatorClicked(self):
 #40623229
         '''加或減按下後進行的處理方法'''
-        #pass
-        
+        pass
+        # 確定按下加或減
         clickedButton = self.sender()
-        
+        # 確定運算子, 為加或減
         clickedOperator = clickedButton.text()
-        
+        # 點按運算子之前在 display 上的數字, 為運算數
         operand = float(self.display.text())
  
-        
-        if self.pendingMultiplicativeOperator:
-            if not self.calculate(operand, self.pendingMultiplicativeOperator):
-                self.abortOperation()
-                return
+        # 納入乘與除之後的先乘除後加減運算邏輯, 且納入連續按下乘或除可累計運算
+        #if self.pendingMultiplicativeOperator:
+          #  if not self.calculate(operand, self.pendingMultiplicativeOperator):
+            #    self.abortOperation()
+             #   return
  
-            self.display.setText(str(self.factorSoFar))
-            operand = self.factorSoFar
-            self.factorSoFar = 0.0
-            self.pendingMultiplicativeOperator = ''
+            #self.display.setText(str(self.factorSoFar))
+            #operand = self.factorSoFar
+            #self.factorSoFar = 0.0
+            #self.pendingMultiplicativeOperator = ''
  
  
-        
+        # 假如有等待運算的加或減, 進入執行運算
+        # 且納入連續按下加或減時, 可以目前的運算數及運算子累計運算
         if self.pendingAdditiveOperator:
             if not self.calculate(operand, self.pendingAdditiveOperator):
                 self.abortOperation()
                 return
-            
+            # 顯示目前的運算結果
             self.display.setText(str(self.sumSoFar))
         else:
-           
-            self.pendingAdditiveOperator = clickedOperator
-       
-            self.waitingForOperand = True
+            # 假如 self.pendingAdditiveOperator 為 False, 則將運算數與 self.fumSoFar 對應
+            self.sumSoFar = operand
  
+        # 能夠重複按下加或減, 以目前的運算數值執行重複運算
+        self.pendingAdditiveOperator = clickedOperator
+        # 進入等待另外一個運算數值的階段, 設為 True 才會清空 LineEdit
+        self.waitingForOperand = True
+ 
+        
         
         
      
@@ -233,14 +238,28 @@ class Dialog(QDialog, Ui_Dialog):
     def backspaceClicked(self):
 #40623229
         '''回復鍵按下的處理方法'''
-        pass
+        #pass
+        if self.waitingForOperand:
+            return
+ 
+        text = self.display.text()[:-1]
+        if not text:
+            text = '0'
+            self.waitingForOperand = True
+ 
+        self.display.setText(text)
         if self.waitingForOperand:
             return
     def clear(self):
 #40623229
         '''清除鍵按下後的處理方法'''
-        pass
-        self.clearButton.clicked.connect(self.clear)
+        #pass
+        if self.waitingForOperand:
+            return
+ 
+        self.display.setText('0')
+        
+        self.waitingForOperand = True
         
     def clearAll(self):
 #40623221
@@ -293,6 +312,7 @@ class Dialog(QDialog, Ui_Dialog):
  
         elif pendingOperator == "-":
             self.sumSoFar -= rightOperand
+            
         elif pendingOperator == "*":
             self.factorSoFar *= rightOperand
  

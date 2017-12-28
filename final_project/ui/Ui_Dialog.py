@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 
-<<<<<<< HEAD
 # Form implementation generated from reading ui file 'Y:\123\github\bg4_pyqt5_calculator\final_project\ui\Dialog.ui'
-=======
 # Form implementation generated from reading ui file 'Y:\tmp\github\bg4_pyqt5_calculator\final_project\ui\Dialog.ui'
->>>>>>> 52b6f257faad14b877d34e7082949c45ad5f08e9
+
 #
 # Created by: PyQt5 UI code generator 5.9
 #
