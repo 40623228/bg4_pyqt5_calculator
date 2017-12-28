@@ -43,6 +43,12 @@ class Dialog(QDialog, Ui_Dialog):
         
         for i in multiply_divide:
             i.clicked.connect(self.multiplicativeOperatorClicked)  
+        
+        
+        plus_minus = [self.plusButton,  self.minusButton]    
+        for i in plus_minus:
+            i.clicked.connect(self.additiveOperatorClicked)
+ 
            
          
         
@@ -72,9 +78,42 @@ class Dialog(QDialog, Ui_Dialog):
     def additiveOperatorClicked(self):
 #40623229
         '''加或減按下後進行的處理方法'''
-        pass
-        for i in plus_minus:
-            i.clicked.connect(self.additiveOperatorClicked)
+        #pass
+        
+        clickedButton = self.sender()
+        
+        clickedOperator = clickedButton.text()
+        
+        operand = float(self.display.text())
+ 
+        
+        if self.pendingMultiplicativeOperator:
+            if not self.calculate(operand, self.pendingMultiplicativeOperator):
+                self.abortOperation()
+                return
+ 
+            self.display.setText(str(self.factorSoFar))
+            operand = self.factorSoFar
+            self.factorSoFar = 0.0
+            self.pendingMultiplicativeOperator = ''
+ 
+ 
+        
+        if self.pendingAdditiveOperator:
+            if not self.calculate(operand, self.pendingAdditiveOperator):
+                self.abortOperation()
+                return
+            
+            self.display.setText(str(self.sumSoFar))
+        else:
+           
+            self.pendingAdditiveOperator = clickedOperator
+       
+            self.waitingForOperand = True
+ 
+        
+        
+     
         
     def multiplicativeOperatorClicked(self):
 #40623220
