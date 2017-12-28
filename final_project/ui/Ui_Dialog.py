@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
+<<<<<<< HEAD
 # Form implementation generated from reading ui file 'Y:\123\github\bg4_pyqt5_calculator\final_project\ui\Dialog.ui'
+=======
+# Form implementation generated from reading ui file 'Y:\tmp\github\bg4_pyqt5_calculator\final_project\ui\Dialog.ui'
+>>>>>>> 52b6f257faad14b877d34e7082949c45ad5f08e9
 #
 # Created by: PyQt5 UI code generator 5.9
 #
@@ -177,14 +181,14 @@ class Ui_Dialog(object):
         self.zero.setFont(font)
         self.zero.setObjectName("zero")
         self.gridLayout.addWidget(self.zero, 5, 1, 1, 1)
-        self.pushButton_22 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_22.setMinimumSize(QtCore.QSize(50, 50))
-        self.pushButton_22.setMaximumSize(QtCore.QSize(50, 50))
+        self.pointButton = QtWidgets.QPushButton(Dialog)
+        self.pointButton.setMinimumSize(QtCore.QSize(50, 50))
+        self.pointButton.setMaximumSize(QtCore.QSize(50, 50))
         font = QtGui.QFont()
         font.setPointSize(15)
-        self.pushButton_22.setFont(font)
-        self.pushButton_22.setObjectName("pushButton_22")
-        self.gridLayout.addWidget(self.pushButton_22, 5, 2, 1, 1)
+        self.pointButton.setFont(font)
+        self.pointButton.setObjectName("pointButton")
+        self.gridLayout.addWidget(self.pointButton, 5, 2, 1, 1)
         self.pushButton_20 = QtWidgets.QPushButton(Dialog)
         self.pushButton_20.setMinimumSize(QtCore.QSize(50, 50))
         self.pushButton_20.setMaximumSize(QtCore.QSize(50, 50))
@@ -267,7 +271,7 @@ class Ui_Dialog(object):
         self.reciprocalButton.setText(_translate("Dialog", "1/x"))
         self.addToMemoryButton.setText(_translate("Dialog", "M+"))
         self.zero.setText(_translate("Dialog", "0"))
-        self.pushButton_22.setText(_translate("Dialog", "."))
+        self.pointButton.setText(_translate("Dialog", "."))
         self.pushButton_20.setText(_translate("Dialog", "+-"))
         self.plusButton.setText(_translate("Dialog", "+"))
         self.equalButton.setText(_translate("Dialog", "="))
