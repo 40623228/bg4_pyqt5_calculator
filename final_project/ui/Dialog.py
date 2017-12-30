@@ -41,7 +41,11 @@ class Dialog(QDialog, Ui_Dialog):
         
         self.pendingMultiplicativeOperator = ''
         
+        #self.pendingAdditiveOperator =''
+        
         self.factorSoFar = 0.0
+        
+        self.sumSoFar = 0.0
         
         for i in multiply_divide:
             i.clicked.connect(self.multiplicativeOperatorClicked)  
@@ -83,6 +87,7 @@ class Dialog(QDialog, Ui_Dialog):
         clickedButton = self.sender()
         clickedOperator = clickedButton.text()
         operand = float(self.display.text())
+
         
         if self.pendingMultiplicativeOperator:
             if not self.calculate(operand, self.pendingMultiplicativeOperator):
@@ -92,35 +97,32 @@ class Dialog(QDialog, Ui_Dialog):
             self.display.setText(str(self.factorSoFar))
         else:
             self.factorSoFar = operand
- 
-        # 能夠重複按下乘或除, 以目前的運算數值執行重複運算
         self.pendingMultiplicativeOperator = clickedOperator
         self.waitingForOperand = True
-       
-        
+ 
     def equalClicked(self):
 #40623228
         '''等號按下後的處理方法'''
         #pass
         operand = float(self.display.text())
  
-        if self.pendingMultiplicativeOperator:
-            if not self.calculate(operand, self.pendingMultiplicativeOperator):
-                self.abortOperation()
-                return
+        #if self.pendingMultiplicativeOperator:
+            #if not self.calculate(operand, self.pendingMultiplicativeOperator):
+                #self.abortOperation()
+                #return
                 
-            operand = self.factorSoFar
-            self.factorSoFar = 0.0
-            self.pendingMultiplicativeOperator = ''
+            #operand = self.factorSoFar
+            #self.factorSoFar = 0.0
+            #self.pendingMultiplicativeOperator = ''
             
-        if self.pendingAdditiveOperator:
-            if not self.calculate(operand, self.pendingAdditiveOperator):
-                self.abortOperation()
-                return
+        #if self.pendingAdditiveOperator:
+            #if not self.calculate(operand, self.pendingAdditiveOperator):
+             #   self.abortOperation()
+               # return
  
-            self.pendingAdditiveOperator = ''
-        else:
-            self.sumSoFar = operand
+            #self.pendingAdditiveOperator = ''
+        #else:
+        self.sumSoFar = operand
  
         self.display.setText(str(self.sumSoFar))
         self.sumSoFar = 0.0
@@ -142,6 +144,8 @@ class Dialog(QDialog, Ui_Dialog):
             text = "-" + text
         elif value < 0.0:
             text = text[1:]
+            
+        self.display.setText(text)
         
     def backspaceClicked(self):
 #40623229
