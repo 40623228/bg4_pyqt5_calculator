@@ -87,9 +87,9 @@ g.es("---Pandoc---")
 chapter_list = " ".join("./paragraph/" + i for i in [
 "introduction.md",
 "digitClicked.md", 
-#"portable_system.md", 
-#"python_introduction.md", 
-#"pyqt5_introduction.md", 
+"portable_system.md", 
+"python_introduction.md", 
+"pyqt5_introduction.md", 
 "discussion.md", 
 "results.md", 
 ])
