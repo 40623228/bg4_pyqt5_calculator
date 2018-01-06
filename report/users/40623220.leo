@@ -30,14 +30,8 @@
 <v t="yen.20170429214838.1" a="E"><vh>@clean introduction.md</vh>
 <v t="yen.20170429214838.3"><vh>前言內容</vh></v>
 </v>
-<v t="yen.20170429215041.1" a="E"><vh>@clean portable_system.md</vh>
-<v t="yen.20170429215130.1"><vh>可攜程式系統介紹</vh></v>
-</v>
 <v t="yen.20170429215252.1" a="E"><vh>@clean python_introduction.md</vh>
 <v t="yen.20170429215308.1"><vh>Python 程式語法介紹</vh></v>
-</v>
-<v t="yen.20170429215416.1" a="E"><vh>@clean pyqt5_introduction.md</vh>
-<v t="yen.20170429215446.2"><vh>PyQt5 語法介紹</vh></v>
 </v>
 <v t="yen.20170429215617.1" a="E"><vh>@clean calculator.md</vh>
 <v t="yen.20170429215851.1"><vh>計算機程式內容</vh></v>
@@ -45,10 +39,10 @@
 <v t="yen.20170429215922.1" a="E"><vh>@clean discussion.md</vh>
 <v t="yen.20170429220001.1"><vh>程式開發心得</vh></v>
 </v>
-<v t="yen.20170429220128.1" a="E"><vh>@clean results.md</vh>
+<v t="yen.20170429220128.1"><vh>@clean results.md</vh>
 <v t="yen.20170429220137.1"><vh>期末報告結論</vh></v>
 </v>
-<v t="yen.20170429220335.1" a="E"><vh>@clean appendix.md</vh>
+<v t="yen.20170429220335.1"><vh>@clean appendix.md</vh>
 <v t="yen.20170429220335.2"><vh>附錄</vh></v>
 </v>
 </v>
@@ -106,8 +100,8 @@ author:
 - 設計一乙 40623220 蔡崇廷
 - 設計一乙 40623221 XXX
 - 設計一乙 40623228 陳永錩
-- 設計一乙 40623229 XXX
-- 設計一乙 40623229 XXX
+- 設計一乙 40623229 陳宥安
+- 設計一乙 40623230 陳柏亦
 advisor_zh: '嚴家銘'
 date: '2017.12.18'
 ---
@@ -248,27 +242,6 @@ abstract: |
 提及了某篇刊物[@myart]在這裡。
 </t>
 <t tx="yen.20170429214845.1"></t>
-<t tx="yen.20170429215041.1">可攜程式系統介紹
-===
-
-可攜程式系統介紹
-
-@others</t>
-<t tx="yen.20170429215130.1">啟動與關閉
----
-
-Windows 的內容
-
-有一張圖片：
-
-![Kmol][]
-
-稱為圖 {@fig:駱駝}。
-
-各 md 檔案可以在 images 目錄下自訂與 md 檔案名稱相同的子目錄存放影像檔案
-
-啟動與關閉2
----</t>
 <t tx="yen.20170429215252.1">Python 程式語法
 ===
 
@@ -301,44 +274,6 @@ print 函式
 
 數列
 ---</t>
-<t tx="yen.20170429215416.1"> PyQt5 簡介
-===
-
-說明 PyQt5 基本架構與程式開發流程
-
-@others</t>
-<t tx="yen.20170429215446.2">PyQt5 架構
----
-
-C 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
 <t tx="yen.20170429215617.1">Calculator 程式
 ===
 
