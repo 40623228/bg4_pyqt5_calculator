@@ -85,6 +85,7 @@ __40623221__
 
         self.display.setText(str(result))
         self.waitingForOperand = True
+        
         說明:按下1/x若分母為0則需中斷運算,若按下Sqrt且數字小於0也是中斷運算,
         按下X^2若數字為2則需運算2的平方..
         
@@ -99,6 +100,7 @@ __40623221__
             self.display.setText(self.display.text() + ".")
  
         self.waitingForOperand = False
+        
         說明:若出現display,且在數字0後面沒出現小數點則將小數點顯示出來..
         
          def clearAll(self):
@@ -111,6 +113,7 @@ __40623221__
         self.pendingMultiplicativeOperator = ''
         self.display.setText('0')
         self.waitingForOperand = True
+        
         說明:按下clearall則把全部運算停止並將全部情除最後出現0
         
 

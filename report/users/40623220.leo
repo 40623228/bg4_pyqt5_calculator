@@ -103,7 +103,7 @@ title_en: 'PyQt5 Event-Driven Calculator Project'
 author:
 - 設計一乙 40623219 XXX
 - 設計一乙 40623220 蔡崇廷
-- 設計一乙 40623221 XXX
+- 設計一乙 40623221 蔡和勳
 - 設計一乙 40623228 陳永錩
 - 設計一乙 40623229 陳宥安
 - 設計一乙 40623230 陳柏亦
@@ -283,7 +283,62 @@ __40623220__
 
 
 __40623221__
+    def unaryOperatorClicked(self):
+#40623221
+        '''單一運算元按下後處理方法'''
+        #pass
+        clickedButton = self.sender()
+        clickedOperator = clickedButton.text()
+        operand = float(self.display.text())
 
+        if clickedOperator == "Sqrt":
+            if operand &lt; 0.0:
+                self.abortOperation()
+                return
+
+            result = math.sqrt(operand)
+        elif clickedOperator == "X^2":
+            result = math.pow(operand, 2.0)
+        elif clickedOperator == "1/x":
+            if operand == 0.0:
+                self.abortOperation()
+                return
+
+            result = 1.0 / operand
+
+        self.display.setText(str(result))
+        self.waitingForOperand = True
+        
+        說明:按下1/x若分母為0則需中斷運算,若按下Sqrt且數字小於0也是中斷運算,
+        按下X^2若數字為2則需運算2的平方..
+        
+        def pointClicked(self):
+#40623221
+        '''小數點按下.後的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            self.display.setText('0')
+ 
+        if "." not in self.display.text():
+            self.display.setText(self.display.text() + ".")
+ 
+        self.waitingForOperand = False
+        
+        說明:若出現display,且在數字0後面沒出現小數點則將小數點顯示出來..
+        
+         def clearAll(self):
+#40623221
+        '''全部清除鍵按下後的處理方法'''
+        #pass
+        self.sumSoFar = 0.0
+        self.factorSoFar = 0.0
+        self.pendingAdditiveOperator = ''
+        self.pendingMultiplicativeOperator = ''
+        self.display.setText('0')
+        self.waitingForOperand = True
+        
+        說明:按下clearall則把全部運算停止並將全部情除最後出現0
+        
 
 
 
@@ -469,7 +524,8 @@ python的數列是一個[   ]
 
 Calculator 程式細部說明
 
-@others</t>
+@others
+</t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
 step1
@@ -526,11 +582,14 @@ Github 協同倉儲
 
 期末報告結論
 
-@others</t>
+@others
+</t>
 <t tx="yen.20170429220137.1">結論與建議
----
+---40623221  蔡和勳
+在這堂課學到如何運用自己的時間以及倉儲編輯還有fossil和github的相關指令,還知道隨身系統搞好只要帶著隨身碟不管到哪裡都可以工作
 
-結論與建議內容</t>
+結論與建議內容
+</t>
 <t tx="yen.20170429220335.1">附錄
 ===
 
