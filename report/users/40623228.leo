@@ -38,8 +38,6 @@
 </v>
 <v t="yen.20170429215617.1" a="E"><vh>@clean calculator.md</vh>
 <v t="yen.20170429215851.1"><vh>計算機程式內容</vh></v>
-<v t="leo.20180107183708.1"><vh>計算機程式內容</vh></v>
-<v t="leo.20180107183709.1"><vh>計算機程式內容</vh></v>
 </v>
 <v t="yen.20170429215922.1" a="E"><vh>計算機程式內容</vh>
 <v t="yen.20170429220001.1"><vh>程式開發心得</vh></v>
@@ -52,12 +50,6 @@
 </v>
 </v>
 </v>
-</v>
-</v>
-<v t="leo.20180107192547.2" a="E"><vh>Recovered Nodes</vh>
-<v t="leo.20180107192547.3"><vh>Recovered node "計算機程式內容" from @clean calculator.md</vh>
-<v t="leo.20180107192547.4"><vh>old:計算機程式內容</vh></v>
-<v t="leo.20180107192547.5"><vh>new:計算機程式內容</vh></v>
 </v>
 </v>
 </vnodes>
@@ -234,178 +226,6 @@ abstract: |
 @others</t>
 <t tx="leo.20180107125327.2">PyQt5 架構
 ---
-
-C 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
-<t tx="leo.20180107183708.1">
-建立按鈕
----
-![button][]
-
-[button]: ./images/button.png {#fig:格子}
-
-
-![grid][]
-
-[grid]: ./images/grid.png {#fig:排版}
-
-
-![QTDialog][]
-
-[QTDialog]: ./images/QTDialog.png {#fig:完成按鈕}
-</t>
-<t tx="leo.20180107183709.1">
-
-建立程式碼
----
-
-
-
-
-</t>
-<t tx="leo.20180107192547.2"></t>
-<t tx="leo.20180107192547.3">(uncached) yen.20170429215851.1
-Diff...
-  建立對話框
-  ---
-- 
-- 123
-  ![newproject][]
-  
-  [newproject]: ./images/newproject.png {#fig:表單}
-  
-- 
-- 123
-  ![newform][]
-  
-  [newform]: ./images/newform.png {#fig:新建}
-  
-- 
-- 123
-  ![mk][]
-  
-  [mk]: ./images/mk.png {#fig:建立}
-  
-- 123
-  ![Dialog into ui][]
-  
-  [Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
-  
-- 123
-+ 
-  ![qtdesigner][]
-  
-  [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</t>
-<t tx="leo.20180107192547.4">建立對話框
----
-![newproject][]
-
-[newproject]: ./images/newproject.png {#fig:表單}
-
-![newform][]
-
-[newform]: ./images/newform.png {#fig:新建}
-
-![mk][]
-
-[mk]: ./images/mk.png {#fig:建立}
-
-![Dialog into ui][]
-
-[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
-
-
-![qtdesigner][]
-
-[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
-
-
-
-
-
-
-
-
-
-
-</t>
-<t tx="leo.20180107192547.5">建立對話框
----
-
-123
-![newproject][]
-
-[newproject]: ./images/newproject.png {#fig:表單}
-
-
-123
-![newform][]
-
-[newform]: ./images/newform.png {#fig:新建}
-
-
-123
-![mk][]
-
-[mk]: ./images/mk.png {#fig:建立}
-
-123
-![Dialog into ui][]
-
-[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
-
-123
-![qtdesigner][]
-
-[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
-
-
-
-
-
-
-
-
-
-
 </t>
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
@@ -440,21 +260,39 @@ Diff...
 
 Python 程式語法
 
-@others</t>
+@others
+</t>
 <t tx="yen.20170429215308.1">變數命名
 ---
+Python3 變數命名規則與關鍵字
 
-IPv4 的內容
+一、Python 英文變數命名規格
 
-有一張圖片：
+1.變數必須以英文字母大寫或小寫或底線開頭
 
-![Kmol][]
+2.變數其餘字元可以是英文大小寫字母, 數字或底線
 
-稱為圖 {@fig:駱駝}。
+3.變數區分英文大小寫
 
-各 md 檔案可以在 images 目錄下自訂與 md 檔案名稱相同的子目錄存放影像檔案
+4.變數不限字元長度
 
-[Kmol]: ./images/kmol.png {#fig:駱駝}
+5.不可使用關鍵字當作變數名稱
+
+二、Python3 的程式關鍵字, 使用者命名變數時, 必須避開下列保留字.
+
+1.Python keywords: ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+2.選擇好的變數名稱:
+
+使用有意義且適當長度的變數名稱， 例如: 使用 length 代表長度, 不要單獨使用 l 或 L, 也不要使用 this_is_the_length
+程式前後變數命名方式盡量一致, 例如: 使用 rect_length 或 RectLength
+用底線開頭的變數通常具有特殊意義
+
+
+
+
+
+
 
 print 函式
 ---
@@ -466,7 +304,8 @@ print 函式
 ---
 
 數列
----</t>
+---
+</t>
 <t tx="yen.20170429215617.1">Calculator 程式
 ===
 
@@ -476,26 +315,30 @@ Calculator 程式細部說明
 </t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
-##123
 
- ![newproject][]
- 
-##123
+step1
+
+![newproject][]
+step2
 
  ![newform][]
 
-##123
+step3
 
- ![mk][]
-
-##123
+![mk][]
+step4
 
  ![Dialog into ui][]
 
-##123
+step5
 
- ![qtdesigner][]
+![qtdesigner][]
 
+[newproject]: ./images/newproject.png {#fig:表單}
+[newform]: ./images/newform.png {#fig:新建}
+[mk]: ./images/mk.png {#fig:建立}
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
 
 [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
@@ -508,6 +351,53 @@ Calculator 程式細部說明
 
 [Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
 
+建立按鈕
+---
+step1
+
+![button][]
+
+step2
+
+![grid][]
+
+以上是由Qtdesigner製作
+
+Qtdesigner詳細請查閱第五章
+
+[button]: ./images/button.png {#fig:格子}
+[grid]: ./images/grid.png {#fig:排版}
+
+建立程式碼
+---
+__40623220__
+
+
+
+
+__40623221__
+
+
+
+
+
+__40623228__
+
+
+
+
+
+
+
+__40623229__
+
+
+
+
+
+
+
+__40623230__
 
 
 

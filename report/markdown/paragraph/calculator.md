@@ -5,26 +5,30 @@ Calculator 程式細部說明
 
 建立對話框
 ---
-##123
 
- ![newproject][]
- 
-##123
+step1
+
+![newproject][]
+step2
 
  ![newform][]
 
-##123
+step3
 
- ![mk][]
-
-##123
+![mk][]
+step4
 
  ![Dialog into ui][]
 
-##123
+step5
 
- ![qtdesigner][]
+![qtdesigner][]
 
+[newproject]: ./images/newproject.png {#fig:表單}
+[newform]: ./images/newform.png {#fig:新建}
+[mk]: ./images/mk.png {#fig:建立}
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
 
 [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
@@ -37,30 +41,53 @@ Calculator 程式細部說明
 
 [Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
 
-
-
-
-
-
 建立按鈕
 ---
+step1
+
 ![button][]
 
-[button]: ./images/button.png {#fig:格子}
-
+step2
 
 ![grid][]
 
+以上是由Qtdesigner製作
+
+Qtdesigner詳細請查閱第五章
+
+[button]: ./images/button.png {#fig:格子}
 [grid]: ./images/grid.png {#fig:排版}
-
-
-![QTDialog][]
-
-[QTDialog]: ./images/QTDialog.png {#fig:完成按鈕}
-
 
 建立程式碼
 ---
+__40623220__
+
+
+
+
+__40623221__
+
+
+
+
+
+__40623228__
+
+
+
+
+
+
+
+__40623229__
+
+
+
+
+
+
+
+__40623230__
 
 
 
