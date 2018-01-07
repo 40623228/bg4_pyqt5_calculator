@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ahshoe.20161120121808.1"><vh>@settings</vh>
+<v t="ahshoe.20161120121808.1" a="E"><vh>@settings</vh>
 <v t="ahshoe.20170315212615.1"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="ahshoe.20170315212626.1"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
@@ -27,28 +27,21 @@
 </v>
 <v t="leo.20171119234822.1" a="E"><vh>各章節內容</vh>
 <v t="yen.20170429214845.1" a="E"><vh>@path paragraph</vh>
-<v t="yen.20170429214838.1"><vh>@clean introduction.md</vh>
+<v t="yen.20170429214838.1" a="E"><vh>@clean introduction.md</vh>
 <v t="yen.20170429214838.3"><vh>前言內容</vh></v>
 </v>
-<v t="yen.20170429215041.1" a="E"><vh>@clean __init__.md</vh>
-<v t="yen.20170429215130.1"><vh>init</vh></v>
-</v>
-<v t="leo.20171231050504.1" a="E"><vh>@clean digitClicked.md</vh>
-<v t="leo.20171231050504.2"><vh>數字按鍵邏輯介紹</vh></v>
-</v>
-<v t="leo.20171231042348.1" a="E"><vh>@clean portable_system.md</vh>
-<v t="leo.20171231042348.2"><vh>可攜程式系統介紹</vh></v>
-</v>
-<v t="yen.20170429215252.1"><vh>@clean python_introduction.md</vh>
+<v t="yen.20170429215252.1" a="E"><vh>@clean python_introduction.md</vh>
 <v t="yen.20170429215308.1"><vh>Python 程式語法介紹</vh></v>
 </v>
-<v t="yen.20170429215416.1"><vh>@clean pyqt5_introduction.md</vh>
-<v t="yen.20170429215446.2"><vh>PyQt5 語法介紹</vh></v>
+<v t="leo.20180107125327.1" a="E"><vh>@clean pyqt5_introduction.md</vh>
+<v t="leo.20180107125327.2"><vh>PyQt5 語法介紹</vh></v>
 </v>
-<v t="yen.20170429215617.1"><vh>@clean calculator.md</vh>
+<v t="yen.20170429215617.1" a="E"><vh>@clean calculator.md</vh>
 <v t="yen.20170429215851.1"><vh>計算機程式內容</vh></v>
+<v t="leo.20180107183708.1"><vh>計算機程式內容</vh></v>
+<v t="leo.20180107183709.1"><vh>計算機程式內容</vh></v>
 </v>
-<v t="yen.20170429215922.1"><vh>@clean discussion.md</vh>
+<v t="yen.20170429215922.1" a="E"><vh>計算機程式內容</vh>
 <v t="yen.20170429220001.1"><vh>程式開發心得</vh></v>
 </v>
 <v t="yen.20170429220128.1"><vh>@clean results.md</vh>
@@ -59,6 +52,12 @@
 </v>
 </v>
 </v>
+</v>
+</v>
+<v t="leo.20180107192547.2" a="E"><vh>Recovered Nodes</vh>
+<v t="leo.20180107192547.3"><vh>Recovered node "計算機程式內容" from @clean calculator.md</vh>
+<v t="leo.20180107192547.4"><vh>old:計算機程式內容</vh></v>
+<v t="leo.20180107192547.5"><vh>new:計算機程式內容</vh></v>
 </v>
 </v>
 </vnodes>
@@ -86,10 +85,10 @@ g.es("---Pandoc---")
 # 選擇所要納入的 Markdown 檔案, 不納入的檔案名稱前方加上  # 即可
 chapter_list = " ".join("./paragraph/" + i for i in [
 "introduction.md",
-"digitClicked.md", 
-#"portable_system.md", 
-#"python_introduction.md", 
-#"pyqt5_introduction.md", 
+"portable_system.md", 
+"calculator.md", 
+"python_introduction.md", 
+"pyqt5_introduction.md", 
 "discussion.md", 
 "results.md", 
 ])
@@ -227,84 +226,187 @@ abstract: |
 參考 - 詳列所引用的參考內容
 
 附錄 - 附加值得參考的詳細內容</t>
-<t tx="leo.20171231042348.1">可攜程式系統介紹
+<t tx="leo.20180107125327.1"> PyQt5 簡介
 ===
 
-可攜程式系統介紹
+說明 PyQt5 基本架構與程式開發流程
 
 @others</t>
-<t tx="leo.20171231042348.2">啟動與關閉
+<t tx="leo.20180107125327.2">PyQt5 架構
 ---
 
-Windows 的內容
+C 的內容
 
-有一張圖片：
+其中包含一個表格：
 
-![Kmol][]
+Table: Python 網際框架比較 {#tbl:網際框架}
 
-稱為圖 {@fig:駱駝}。
+| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
+|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
+| Pyramid | 2005 | V | V |  |  | V |  | large |
+| Django | 2006 | V | V | V | V | V | V | large |
+| Flask | 2010 | V |  |  |  |  |  | small |
 
-各 md 檔案可以在 images 目錄下自訂與 md 檔案名稱相同的子目錄存放影像檔案
+稱為表 {@tbl:網際框架}。
 
-啟動與關閉2
----</t>
-<t tx="leo.20171231050504.1">數字按鍵邏輯介紹
-===
+Table: 價目表 {#tbl:價目表}
 
-數字按鍵邏輯介紹
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
 
-@others</t>
-<t tx="leo.20171231050504.2">按建訊息
+稱為表 {@tbl:價目表}。
+
+關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
+
+[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+
+</t>
+<t tx="leo.20180107183708.1">
+建立按鈕
 ---
-self.one.clicked.connect(self.digitClicked)
+![button][]
 
-self.two.clicked.connect(self.digitClicked)
-
-                    ˙
-                    ˙
-                    ˙
-                    ˙
-                    ˙
-                    
-因為只有前面的名稱再變換所以可以用for迴圈減短程式的長度
-                    
-num_button = [self.one,  self.two,  \
-        self.three,  self.four,  self.five,  self.six,  self.seven,  self.eight,  self.nine, self.zero]
-       
-for i in num_button:
-            i.clicked.connect(self.digitClicked)
-            
-利用for迴圈只需要兩行 就可以達到同樣效果
+[button]: ./images/button.png {#fig:格子}
 
 
-數字邏輯
+![grid][]
+
+[grid]: ./images/grid.png {#fig:排版}
+
+
+![QTDialog][]
+
+[QTDialog]: ./images/QTDialog.png {#fig:完成按鈕}
+</t>
+<t tx="leo.20180107183709.1">
+
+建立程式碼
 ---
-使用者按下數字鍵, 必須能夠累積顯示該數字
-當顯示幕已經為 0, 再按零不會顯示 00, 而仍顯示 0 或 0.0
 
-+def __init__(self,parent=None)
 
-self.display.setText('0')----在還沒有任何動作以前display顯示0
 
-self.waitingForOperand = True---從...導入屬性並進行等待運算
 
-+def digitClicked(self):進入數字邏輯
+</t>
+<t tx="leo.20180107192547.2"></t>
+<t tx="leo.20180107192547.3">(uncached) yen.20170429215851.1
+Diff...
+  建立對話框
+  ---
+- 
+- 123
+  ![newproject][]
+  
+  [newproject]: ./images/newproject.png {#fig:表單}
+  
+- 
+- 123
+  ![newform][]
+  
+  [newform]: ./images/newform.png {#fig:新建}
+  
+- 
+- 123
+  ![mk][]
+  
+  [mk]: ./images/mk.png {#fig:建立}
+  
+- 123
+  ![Dialog into ui][]
+  
+  [Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+  
+- 123
++ 
+  ![qtdesigner][]
+  
+  [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</t>
+<t tx="leo.20180107192547.4">建立對話框
+---
+![newproject][]
 
-        clickedButton = self.sender()----令clickedButton為按下按鍵後傳來得訊息
-        
-        digitValue = int(clickedButton.text())----令digitValue為訊息內的text訊息並化為整數
-        
-        if self.display.text() == '0' and digitValue == 0.0:----判斷式:如果display顯是為0時傳來的訊息也為0時則運行下列結果
-        
-            return---重置指令
-            
-        if self.waitingForOperand:---判斷式:有等待運算執行下列結果
-        
-            self.display.clear()-----清除dispaly上的數字
-            
-            self.waitingForOperand = False----不進入等待運算
-            
-        self.display.setText(self.display.text() + str(digitValue))------將原先的字串疊上後加上的字串</t>
+[newproject]: ./images/newproject.png {#fig:表單}
+
+![newform][]
+
+[newform]: ./images/newform.png {#fig:新建}
+
+![mk][]
+
+[mk]: ./images/mk.png {#fig:建立}
+
+![Dialog into ui][]
+
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+
+
+![qtdesigner][]
+
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+
+
+
+
+
+
+
+
+
+
+</t>
+<t tx="leo.20180107192547.5">建立對話框
+---
+
+123
+![newproject][]
+
+[newproject]: ./images/newproject.png {#fig:表單}
+
+
+123
+![newform][]
+
+[newform]: ./images/newform.png {#fig:新建}
+
+
+123
+![mk][]
+
+[mk]: ./images/mk.png {#fig:建立}
+
+123
+![Dialog into ui][]
+
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+
+123
+![qtdesigner][]
+
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+
+
+
+
+
+
+
+
+
+
+</t>
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
@@ -333,38 +435,6 @@ self.waitingForOperand = True---從...導入屬性並進行等待運算
 提及了某篇刊物[@myart]在這裡。
 </t>
 <t tx="yen.20170429214845.1"></t>
-<t tx="yen.20170429215041.1">數字按鍵邏輯介紹
-===
-http://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/
-數字按鍵邏輯介紹
-
-@others</t>
-<t tx="yen.20170429215130.1">按建訊息
----
-self.one.clicked.connect(self.digitClicked)
-
-self.two.clicked.connect(self.digitClicked)
-
-                    ˙
-                    ˙
-                    ˙
-                    ˙
-                    ˙
-                    
-因為只有前面的名稱再變換所以可以用for迴圈減短程式的長度
-                    
-num_button = [self.one,  self.two,  \
-        self.three,  self.four,  self.five,  self.six,  self.seven,  self.eight,  self.nine, self.zero]
-       
-for i in num_button:
-            i.clicked.connect(self.digitClicked)
-            
-利用for迴圈只需要兩行 就可以達到同樣效果
-
-
-數字邏輯
----
-</t>
 <t tx="yen.20170429215252.1">Python 程式語法
 ===
 
@@ -397,86 +467,50 @@ print 函式
 
 數列
 ---</t>
-<t tx="yen.20170429215416.1"> PyQt5 簡介
-===
-
-說明 PyQt5 基本架構與程式開發流程
-
-@others</t>
-<t tx="yen.20170429215446.2">PyQt5 架構
----
-
-C 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
 <t tx="yen.20170429215617.1">Calculator 程式
 ===
 
 Calculator 程式細部說明
 
-@others</t>
+@others
+</t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
+##123
 
-自動控制 的內容
+ ![newproject][]
+ 
+##123
 
-其中包含一個表格：
+ ![newform][]
 
-Table: Python 網際框架比較 {#tbl:網際框架}
+##123
 
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
+ ![mk][]
 
-稱為表 {@tbl:網際框架}。
+##123
 
-Table: 價目表 {#tbl:價目表}
+ ![Dialog into ui][]
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+##123
 
-稱為表 {@tbl:價目表}。
+ ![qtdesigner][]
 
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
 
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
 
-建立按鈕
----
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
-建立程式碼
----
+[newproject]: ./images/newproject.png {#fig:表單}
+
+[newform]: ./images/newform.png {#fig:新建}
+
+[mk]: ./images/mk.png {#fig:建立}
+
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+
+
+
+
 
 </t>
 <t tx="yen.20170429215922.1">心得

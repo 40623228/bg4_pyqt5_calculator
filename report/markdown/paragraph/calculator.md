@@ -5,38 +5,63 @@ Calculator 程式細部說明
 
 建立對話框
 ---
+##123
 
-自動控制 的內容
+ ![newproject][]
+ 
+##123
 
-其中包含一個表格：
+ ![newform][]
 
-Table: Python 網際框架比較 {#tbl:網際框架}
+##123
 
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
+ ![mk][]
 
-稱為表 {@tbl:網際框架}。
+##123
 
-Table: 價目表 {#tbl:價目表}
+ ![Dialog into ui][]
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+##123
 
-稱為表 {@tbl:價目表}。
+ ![qtdesigner][]
 
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
 
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+
+[newproject]: ./images/newproject.png {#fig:表單}
+
+[newform]: ./images/newform.png {#fig:新建}
+
+[mk]: ./images/mk.png {#fig:建立}
+
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+
+
+
+
+
 
 建立按鈕
 ---
+![button][]
+
+[button]: ./images/button.png {#fig:格子}
+
+
+![grid][]
+
+[grid]: ./images/grid.png {#fig:排版}
+
+
+![QTDialog][]
+
+[QTDialog]: ./images/QTDialog.png {#fig:完成按鈕}
+
 
 建立程式碼
 ---
+
+
+
 

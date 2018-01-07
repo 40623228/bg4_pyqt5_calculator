@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ahshoe.20161120121808.1"><vh>@settings</vh>
+<v t="ahshoe.20161120121808.1" a="E"><vh>@settings</vh>
 <v t="ahshoe.20170315212615.1"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="ahshoe.20170315212626.1"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
@@ -30,25 +30,24 @@
 <v t="yen.20170429214838.1" a="E"><vh>@clean introduction.md</vh>
 <v t="yen.20170429214838.3"><vh>前言內容</vh></v>
 </v>
-<v t="yen.20170429215041.1" a="E"><vh>@clean portable_system.md</vh>
-<v t="yen.20170429215130.1"><vh>可攜程式系統介紹</vh></v>
-</v>
 <v t="yen.20170429215252.1" a="E"><vh>@clean python_introduction.md</vh>
 <v t="yen.20170429215308.1"><vh>Python 程式語法介紹</vh></v>
 </v>
-<v t="yen.20170429215416.1" a="E"><vh>@clean pyqt5_introduction.md</vh>
-<v t="yen.20170429215446.2"><vh>PyQt5 語法介紹</vh></v>
+<v t="leo.20180107125327.1" a="E"><vh>@clean pyqt5_introduction.md</vh>
+<v t="leo.20180107125327.2"><vh>PyQt5 語法介紹</vh></v>
 </v>
 <v t="yen.20170429215617.1" a="E"><vh>@clean calculator.md</vh>
 <v t="yen.20170429215851.1"><vh>計算機程式內容</vh></v>
+<v t="leo.20180107183708.1"><vh>計算機程式內容</vh></v>
+<v t="leo.20180107183709.1"><vh>計算機程式內容</vh></v>
 </v>
-<v t="yen.20170429215922.1" a="E"><vh>@clean discussion.md</vh>
+<v t="yen.20170429215922.1" a="E"><vh>計算機程式內容</vh>
 <v t="yen.20170429220001.1"><vh>程式開發心得</vh></v>
 </v>
-<v t="yen.20170429220128.1" a="E"><vh>@clean results.md</vh>
+<v t="yen.20170429220128.1"><vh>@clean results.md</vh>
 <v t="yen.20170429220137.1"><vh>期末報告結論</vh></v>
 </v>
-<v t="yen.20170429220335.1" a="E"><vh>@clean appendix.md</vh>
+<v t="yen.20170429220335.1"><vh>@clean appendix.md</vh>
 <v t="yen.20170429220335.2"><vh>附錄</vh></v>
 </v>
 </v>
@@ -81,6 +80,7 @@ g.es("---Pandoc---")
 chapter_list = " ".join("./paragraph/" + i for i in [
 "introduction.md",
 "portable_system.md", 
+"calculator.md", 
 "python_introduction.md", 
 "pyqt5_introduction.md", 
 "discussion.md", 
@@ -106,8 +106,8 @@ author:
 - 設計一乙 40623220 蔡崇廷
 - 設計一乙 40623221 XXX
 - 設計一乙 40623228 陳永錩
-- 設計一乙 40623229 XXX
-- 設計一乙 40623229 XXX
+- 設計一乙 40623229 陳宥安
+- 設計一乙 40623230 陳柏亦
 advisor_zh: '嚴家銘'
 date: '2017.12.18'
 ---
@@ -220,6 +220,70 @@ abstract: |
 參考 - 詳列所引用的參考內容
 
 附錄 - 附加值得參考的詳細內容</t>
+<t tx="leo.20180107125327.1"> PyQt5 簡介
+===
+
+說明 PyQt5 基本架構與程式開發流程
+
+@others</t>
+<t tx="leo.20180107125327.2">PyQt5 架構
+---
+
+C 的內容
+
+其中包含一個表格：
+
+Table: Python 網際框架比較 {#tbl:網際框架}
+
+| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
+|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
+| Pyramid | 2005 | V | V |  |  | V |  | large |
+| Django | 2006 | V | V | V | V | V | V | large |
+| Flask | 2010 | V |  |  |  |  |  | small |
+
+稱為表 {@tbl:網際框架}。
+
+Table: 價目表 {#tbl:價目表}
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+稱為表 {@tbl:價目表}。
+
+關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
+
+[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+
+</t>
+<t tx="leo.20180107183708.1">
+建立按鈕
+---
+![button][]
+
+[button]: ./images/button.png {#fig:格子}
+
+
+![grid][]
+
+[grid]: ./images/grid.png {#fig:排版}
+
+
+![QTDialog][]
+
+[QTDialog]: ./images/QTDialog.png {#fig:完成按鈕}
+</t>
+<t tx="leo.20180107183709.1">
+
+建立程式碼
+---
+
+
+
+
+</t>
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
@@ -248,27 +312,6 @@ abstract: |
 提及了某篇刊物[@myart]在這裡。
 </t>
 <t tx="yen.20170429214845.1"></t>
-<t tx="yen.20170429215041.1">可攜程式系統介紹
-===
-
-可攜程式系統介紹
-
-@others</t>
-<t tx="yen.20170429215130.1">啟動與關閉
----
-
-Windows 的內容
-
-有一張圖片：
-
-![Kmol][]
-
-稱為圖 {@fig:駱駝}。
-
-各 md 檔案可以在 images 目錄下自訂與 md 檔案名稱相同的子目錄存放影像檔案
-
-啟動與關閉2
----</t>
 <t tx="yen.20170429215252.1">Python 程式語法
 ===
 
@@ -301,44 +344,6 @@ print 函式
 
 數列
 ---</t>
-<t tx="yen.20170429215416.1"> PyQt5 簡介
-===
-
-說明 PyQt5 基本架構與程式開發流程
-
-@others</t>
-<t tx="yen.20170429215446.2">PyQt5 架構
----
-
-C 的內容
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
-</t>
 <t tx="yen.20170429215617.1">Calculator 程式
 ===
 
@@ -347,40 +352,35 @@ Calculator 程式細部說明
 @others</t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
+![newproject][]
 
-自動控制 的內容
+[newproject]: ./images/newproject.png {#fig:表單}
 
-其中包含一個表格：
+![newform][]
 
-Table: Python 網際框架比較 {#tbl:網際框架}
+[newform]: ./images/newform.png {#fig:新建}
 
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
+![mk][]
 
-稱為表 {@tbl:網際框架}。
+[mk]: ./images/mk.png {#fig:建立}
 
-Table: 價目表 {#tbl:價目表}
+![Dialog into ui][]
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
 
-稱為表 {@tbl:價目表}。
 
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
+![qtdesigner][]
 
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
-建立按鈕
----
 
-建立程式碼
----
+
+
+
+
+
+
+
 
 </t>
 <t tx="yen.20170429215922.1">心得
