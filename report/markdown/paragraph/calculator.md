@@ -5,19 +5,20 @@ Calculator 程式細部說明
 
 建立對話框
 ---
+
 step1
 
 ![newproject][]
 step2
 
-![newform][]
+ ![newform][]
 
 step3
 
 ![mk][]
 step4
 
-![Dialog into ui][]
+ ![Dialog into ui][]
 
 step5
 
@@ -30,9 +31,15 @@ step5
 [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
 
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
+[newproject]: ./images/newproject.png {#fig:表單}
 
+[newform]: ./images/newform.png {#fig:新建}
 
+[mk]: ./images/mk.png {#fig:建立}
+
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
 
 建立按鈕
 ---
@@ -61,6 +68,8 @@ __40623220__
 
 ![mult][]
 
+
+__40623221__
 變號
 
 ![change][]
@@ -137,11 +146,16 @@ __40623221__
 
 __40623228__
 
+數字邏輯
 
+![digitCilcked]
+加減邏輯
 
+![additiveOperatorCliked]
 
+等號邏輯
 
-
+![equalClicked]
 
 __40623229__
       
@@ -184,6 +198,11 @@ __40623230__
 
 
 
+[equalClicked]: ./images/equalClicked.png {#fig:equalClicked}
+[additiveOperatorCliked]: ./images/additiveOperatorCliked.png {#fig:additiveOperatorCliked}
+[digitCilcked]: ./images/digitCilcked.png {#fig:digitCilcked}
+
+
 
 
 
@@ -214,4 +233,5 @@ __40623230__
 [change]: ./images/change.png {#fig:變號}
 [calculator]: ./images/calculator.png {#fig:計算}
 [abo]: ./images/abo.png {#fig:中斷運算}
+
 
