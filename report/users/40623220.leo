@@ -278,8 +278,23 @@ Qtdesigner詳細請查閱第五章
 ---
 __40623220__
 
+*
 
+乘除
 
+![mult][]
+
+變號
+
+![change][]
+
+計算
+
+![calculator][]
+
+中斷運算
+
+![abo][]
 
 
 __40623221__
@@ -336,8 +351,10 @@ __40623230__
 
 
 
-
-
+[mult]: ./images/mult.png {#fig:乘除}
+[change]: ./images/change.png {#fig:變號}
+[calculator]: ./images/calculator.png {#fig:計算}
+[abo]: ./images/abo.png {#fig:中斷運算}
 
 </t>
 <t tx="yen.20170429103742.1"></t>
