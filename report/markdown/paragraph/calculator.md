@@ -144,7 +144,34 @@ __40623228__
 
 
 __40623229__
-
+      
+       '''回復鍵按下的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            return
+ 
+        text = self.display.text()[:-1]
+        if not text:
+            text = '0'
+            self.waitingForOperand = True
+ 
+        self.display.setText(text)
+        if self.waitingForOperand:
+            return
+    def clear(self):
+    
+__40623229__
+     
+      '''清除鍵按下後的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            return
+ 
+        self.display.setText('0')
+        
+        self.waitingForOperand = True
+        
+    def clearAll(self):
 
 
 

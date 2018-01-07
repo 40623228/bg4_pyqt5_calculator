@@ -40,7 +40,7 @@
 <v t="yen.20170429215446.2"><vh>PyQt5 語法介紹</vh></v>
 </v>
 <v t="yen.20170429215617.1" a="E"><vh>@clean calculator.md</vh>
-<v t="yen.20170429215851.1"><vh>計算機程式內容</vh></v>
+<v t="yen.20170429215851.1" a="M"><vh>計算機程式內容</vh></v>
 </v>
 <v t="yen.20170429215922.1" a="E"><vh>@clean discussion.md</vh>
 <v t="yen.20170429220001.1"><vh>程式開發心得</vh></v>
@@ -552,7 +552,34 @@ __40623228__
 
 
 __40623229__
-
+      
+       '''回復鍵按下的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            return
+ 
+        text = self.display.text()[:-1]
+        if not text:
+            text = '0'
+            self.waitingForOperand = True
+ 
+        self.display.setText(text)
+        if self.waitingForOperand:
+            return
+    def clear(self):
+    
+__40623229__
+     
+      '''清除鍵按下後的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            return
+ 
+        self.display.setText('0')
+        
+        self.waitingForOperand = True
+        
+    def clearAll(self):
 
 
 
