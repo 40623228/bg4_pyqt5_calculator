@@ -73,11 +73,15 @@ __40623221__
 
 __40623228__
 
+數字邏輯
 
+![digitCilcked]
 
+加減邏輯
+![additiveOperatorCliked]
+等號邏輯
 
-
-
+![equalClicked]
 
 __40623229__
 
@@ -92,3 +96,6 @@ __40623230__
 
 
 
+[equalClicked]: ./images/equalClicked.png {#fig:equalClicked}
+[additiveOperatorCliked]: ./images/additiveOperatorCliked.png {#fig:additiveOperatorCliked}
+[digitCilcked]: ./images/digitCilcked.png {#fig:digitCilcked}

@@ -27,6 +27,9 @@
 </v>
 <v t="leo.20171119234822.1" a="E"><vh>各章節內容</vh>
 <v t="yen.20170429214845.1" a="E"><vh>@path paragraph</vh>
+<v t="leo.20180108005414.1" a="E"><vh>@clean portable_system.md</vh>
+<v t="leo.20180108005414.2"><vh>可攜程式系統介紹</vh></v>
+</v>
 <v t="yen.20170429214838.1" a="E"><vh>@clean introduction.md</vh>
 <v t="yen.20170429214838.3"><vh>前言內容</vh></v>
 </v>
@@ -46,7 +49,7 @@
 <v t="yen.20170429220128.1"><vh>@clean results.md</vh>
 <v t="yen.20170429220137.1"><vh>期末報告結論</vh></v>
 </v>
-<v t="yen.20170429220335.1"><vh>@clean appendix.md</vh>
+<v t="yen.20170429220335.1" a="E"><vh>@clean appendix.md</vh>
 <v t="yen.20170429220335.2"><vh>附錄</vh></v>
 </v>
 </v>
@@ -190,8 +193,7 @@ QLineEdit#editorLabel {
 vertical: body pane on the botton</t>
 <t tx="ahshoe.20170317115820.1">---
 abstract: |
-    這裡是摘要內容。A pipe character, followed by an indented block of text is treated as a literal block, in which newlines are preserved throughout the block, including the final newline.
-    
+    這裡是摘要內容。
     + 以 YAML 的方式插入。
     + The '+' indicator says to keep newlines at the end of text blocks.
     + 使用 Markdown 語法。
@@ -224,38 +226,18 @@ abstract: |
 
 說明 PyQt5 基本架構與程式開發流程
 
-@others</t>
+@others
+</t>
 <t tx="leo.20180107125327.2">PyQt5 架構
 ---
+PyQt5-GUI frame work , 圖形使用者介面軟體框架 ,可以快速製做GUI界面程式 , 
+是由一系列Python组成。超過620個類，6000和函數和方法
 
-C 的內容
+Qt5原本是C++語法 之後用Python製作而成PyQt
 
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
+Qt採用了signal和slot的概念來處理GUI程式中的用戶事件。
+PyQt同樣支援這種方法。
+任何Python類型都可以定義signal和slot，並與GUI控制項的signal和slot相連線。
 </t>
 <t tx="leo.20180107183709.1">建立按鈕
 ---
@@ -281,7 +263,6 @@ __40623220__
 
 
 
-
 __40623221__
 
 
@@ -290,11 +271,15 @@ __40623221__
 
 __40623228__
 
+數字邏輯
 
+![digitCilcked]
 
+加減邏輯
+![additiveOperatorCliked]
+等號邏輯
 
-
-
+![equalClicked]
 
 __40623229__
 
@@ -309,37 +294,49 @@ __40623230__
 
 
 
+[equalClicked]: ./images/equalClicked.png {#fig:equalClicked}
+[additiveOperatorCliked]: ./images/additiveOperatorCliked.png {#fig:additiveOperatorCliked}
+[digitCilcked]: ./images/digitCilcked.png {#fig:digitCilcked}</t>
+<t tx="leo.20180108005414.1">@language md
 
 
+可攜程式系統介紹
+===
+@others
+可攜程式系統介紹
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@tabwidth -4
 </t>
+<t tx="leo.20180108005414.2">啟動與關閉
+---
+![system-1]
+
+
+可攜程式:因為在不同的電腦擁有的程式也會有所不同所以使用可攜程式的話可以方便在任何電腦執行自己熟悉的程式也可使用建立自己習慣的開發環境
+
+(1)GIMP2-可以做修剪圖片或是裁切圖片
+
+DiaPortable-可繪製圖形幫助註解圖片
+
+(2)GitHub-SCM(組態管理系統)的一種 , 特點多人協同,gh-pages,公開(不公開要花錢)
+
+(3)Python36-在不同電腦都可以進行Python的程式開發
+
+(4)ShareX-可截取螢幕畫面 , 與錄製影片
+
+(5)Fossil-SCM(組態管理系統)的一種 , 特點Totally control 完全可以自己控制伺服到客戶端
+
+啟動與關閉2
+---
+![system-2]
+
+(1)miktex_portable-包含了TeX及其相關程式 , 這些工具是以TeX/LaTeX所構成的
+
+(2)pandoc-2.0.2-以命令列形式實現與用戶的互動，可支援多種作業系統
+
+
+[system-1]: ./images/system-1.png {#fig:格子}
+[system-2]: ./images/system-2.png {#fig:格子}</t>
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
@@ -422,22 +419,24 @@ print 函式
 
 Calculator 程式細部說明
 
-@others</t>
+@others
+</t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
+
 step1
 
 ![newproject][]
 step2
 
-![newform][]
+ ![newform][]
 
 step3
 
 ![mk][]
 step4
 
-![Dialog into ui][]
+ ![Dialog into ui][]
 
 step5
 
@@ -450,9 +449,15 @@ step5
 [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
 
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
+[newproject]: ./images/newproject.png {#fig:表單}
 
+[newform]: ./images/newform.png {#fig:新建}
 
+[mk]: ./images/mk.png {#fig:建立}
+
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
 
 </t>
 <t tx="yen.20170429215922.1">心得
