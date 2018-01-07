@@ -199,9 +199,9 @@ class Dialog(QDialog, Ui_Dialog):
         self.sumSoFar = 0.0
         self.waitingForOperand = True
         
-    def pointClicked(self):
+   def pointClicked(self):
 #40623221
-        '''小數點按下後的處理方法'''
+        '''小數點按下.後的處理方法'''
         #pass
         if self.waitingForOperand:
             self.display.setText('0')
