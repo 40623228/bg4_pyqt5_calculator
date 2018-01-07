@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ahshoe.20161120121808.1"><vh>@settings</vh>
+<v t="ahshoe.20161120121808.1" a="E"><vh>@settings</vh>
 <v t="ahshoe.20170315212615.1"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="ahshoe.20170315212626.1"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
@@ -33,10 +33,15 @@
 <v t="yen.20170429215252.1" a="E"><vh>@clean python_introduction.md</vh>
 <v t="yen.20170429215308.1"><vh>Python 程式語法介紹</vh></v>
 </v>
+<v t="leo.20180107125327.1" a="E"><vh>@clean pyqt5_introduction.md</vh>
+<v t="leo.20180107125327.2"><vh>PyQt5 語法介紹</vh></v>
+</v>
 <v t="yen.20170429215617.1" a="E"><vh>@clean calculator.md</vh>
 <v t="yen.20170429215851.1"><vh>計算機程式內容</vh></v>
+<v t="leo.20180107183708.1"><vh>計算機程式內容</vh></v>
+<v t="leo.20180107183709.1"><vh>計算機程式內容</vh></v>
 </v>
-<v t="yen.20170429215922.1" a="E"><vh>@clean discussion.md</vh>
+<v t="yen.20170429215922.1" a="E"><vh>計算機程式內容</vh>
 <v t="yen.20170429220001.1"><vh>程式開發心得</vh></v>
 </v>
 <v t="yen.20170429220128.1"><vh>@clean results.md</vh>
@@ -215,6 +220,70 @@ abstract: |
 參考 - 詳列所引用的參考內容
 
 附錄 - 附加值得參考的詳細內容</t>
+<t tx="leo.20180107125327.1"> PyQt5 簡介
+===
+
+說明 PyQt5 基本架構與程式開發流程
+
+@others</t>
+<t tx="leo.20180107125327.2">PyQt5 架構
+---
+
+C 的內容
+
+其中包含一個表格：
+
+Table: Python 網際框架比較 {#tbl:網際框架}
+
+| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
+|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
+| Pyramid | 2005 | V | V |  |  | V |  | large |
+| Django | 2006 | V | V | V | V | V | V | large |
+| Flask | 2010 | V |  |  |  |  |  | small |
+
+稱為表 {@tbl:網際框架}。
+
+Table: 價目表 {#tbl:價目表}
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+稱為表 {@tbl:價目表}。
+
+關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
+
+[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+
+</t>
+<t tx="leo.20180107183708.1">
+建立按鈕
+---
+![button][]
+
+[button]: ./images/button.png {#fig:格子}
+
+
+![grid][]
+
+[grid]: ./images/grid.png {#fig:排版}
+
+
+![QTDialog][]
+
+[QTDialog]: ./images/QTDialog.png {#fig:完成按鈕}
+</t>
+<t tx="leo.20180107183709.1">
+
+建立程式碼
+---
+
+
+
+
+</t>
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
@@ -283,12 +352,32 @@ Calculator 程式細部說明
 @others</t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
+![newproject][]
 
-建立按鈕
----
+[newproject]: ./images/newproject.png {#fig:表單}
 
-建立程式碼
----
+![newform][]
+
+[newform]: ./images/newform.png {#fig:新建}
+
+![mk][]
+
+[mk]: ./images/mk.png {#fig:建立}
+
+![Dialog into ui][]
+
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+
+
+![qtdesigner][]
+
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+
+
+
+
+
+
 
 
 
