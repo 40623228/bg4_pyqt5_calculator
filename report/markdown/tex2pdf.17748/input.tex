@@ -1,0 +1,446 @@
+\documentclass[12pt,,]{report}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+
+    \usepackage{xeCJK}
+    % 中文自動換行
+    \XeTeXlinebreaklocale "zh"
+    % 文字的彈性間距
+    \XeTeXlinebreakskip = 0pt plus 1pt
+    \newfontlanguage{Chinese}{CHN}
+    % 章次20級，節次16級，小節次以下14級，本文12級字
+    \def\LARGE{\fontsize{20}{30}\selectfont}%章次
+    \def\Large{\fontsize{16}{24}\selectfont}%節次
+    \def\large{\fontsize{14}{21}\selectfont}%小節次
+    \usepackage{indentfirst}
+    \usepackage{CJKnumb}
+    \renewcommand{\figurename}{圖}
+    \renewcommand{\thefigure}{{\arabic{chapter}}.\arabic{figure}}
+    \renewcommand{\tablename}{表}
+    \renewcommand{\thetable}{{\arabic{chapter}}.\arabic{table}}
+    %重製章節
+    \renewcommand{\chaptername}{}
+    \renewcommand{\thechapter}{第\CJKnumber{\arabic{chapter}}章}
+    \renewcommand{\thesection}{{\arabic{chapter}}.\arabic{section}}
+    \renewcommand{\thesubsection}{{\arabic{chapter}}.{\arabic{section}}.\arabic{subsection}}
+    %設定行距與中英文字型
+    \linespread{1}\selectfont
+    \setCJKmainfont{SimSun}
+    \setmainfont{Times New Roman}
+    \setromanfont{Times New Roman}
+    \setmonofont{Times New Roman}
+    %重製章節標籤
+    \usepackage{titlesec}
+    \titleformat{\chapter}[block]{\LARGE\centering}{\thechapter}{0.5em}{}
+    \titleformat{\section}[block]{\Large}{\thesection}{0.5em}{}
+    \titleformat{\subsection}[block]{\large}{\thesubsection}{0.5em}{}
+    % 重製目錄
+    \usepackage{titletoc}
+    \titlespacing{\chapter}{0pt}{*0}{*2}
+    \titlespacing{\section}{0pt}{*1}{*1}
+    \titlespacing{\subsection}{0pt}{*1}{*1}
+    \titlespacing{\subsubsection}{0pt}{*1}{*1}
+    \titlecontents{chapter}[0em]{}{\contentspush{\thecontentslabel}\hspace*{1em}}{}{\titlerule*[0.7pc]{.}\contentspage}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfauthor={設計一乙 40623219 XXX; 設計一乙 40623220 蔡崇廷; 設計一乙 40623221 XXX; 設計一乙 40623228 陳永錩; 設計一乙 40623229 陳宥安; 設計一乙 40623230 陳柏亦},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[shorthands=off,main=]{babel}
+\else
+  \usepackage{polyglossia}
+  \setmainlanguage[]{}
+\fi
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\begin{document}
+%Cover Start
+\begin{titlepage}
+\vspace{1cm}
+\begin{center}
+\fontsize{36}{54}\selectfont{
+    國立虎尾科技大學\par
+}
+\fontsize{28}{42}\selectfont{機械設計工程系\par}
+\fontsize{24}{36}\selectfont{計算機程式 bg1 期末報告\par}
+\vspace{1.5cm}
+\fontsize{20}{30}\selectfont{
+    PyQt5 事件導向計算器\par
+    PyQt5 Event-Driven Calculator Project\par
+}
+\vspace{\fill}
+\fontsize{18}{27}\selectfont{
+    學生：\par
+    設計一乙 40623219 XXX \par 設計一乙 40623220 蔡崇廷 \par 設計一乙 40623221 XXX \par 設計一乙 40623228 陳永錩 \par 設計一乙 40623229 陳宥安 \par 設計一乙 40623230 陳柏亦 \par
+    指導教授：嚴家銘\par
+}
+\vspace{1.5cm}
+\fontsize{16}{24}\selectfont{2017.12.18\par}
+\end{center}
+\vspace{1cm}
+\end{titlepage}
+
+\newcommand\frontmatter{
+    \cleardoublepage
+    \pagenumbering{roman}
+}
+
+\newcommand\mainmatter{
+    \cleardoublepage
+    \pagenumbering{arabic}
+}
+
+\newcommand\backmatter{
+    \if@openright
+        \cleardoublepage
+    \else
+        \clearpage
+    \fi
+}
+
+%Document start
+
+% Set page number to arabic i ii...
+\frontmatter
+\renewcommand{\abstractname}{\LARGE \center 摘要}
+\chapter*{摘要}
+\addcontentsline{toc}{chapter}{摘要}
+\fontsize{14}{21}\selectfont{這裡是摘要內容。 + 以 YAML 的方式插入。 + The `+' indicator says to keep
+newlines at the end of text blocks. + 使用 Markdown 語法。 +
+前面使用加號
+
+本研究的重點在於 \ldots{}}
+
+
+\begingroup
+    \renewcommand{\contentsname}{\center 目錄 \addcontentsline{toc}{chapter}{目錄}}
+    \renewcommand{\numberline}[1]{~#1\hspace*{1em}}
+        \setcounter{tocdepth}{2}
+    \tableofcontents
+    \newcommand{\lotlabel}{表}
+    \renewcommand{\listtablename}{\center 表目錄 \addcontentsline{toc}{chapter}{表目錄}}
+    \renewcommand{\numberline}[1]{\lotlabel~#1\hspace*{1em}}
+    \listoftables
+    \newcommand{\loflabel}{圖}
+    \renewcommand{\listfigurename}{\center 圖目錄 \addcontentsline{toc}{chapter}{圖目錄}}
+    \renewcommand{\numberline}[1]{\loflabel~#1\hspace*{1em}}
+    \listoffigures
+\endgroup
+
+% Start normal page number, 1 2 3
+\mainmatter
+\hypertarget{ux524dux8a00}{%
+\chapter{前言}\label{ux524dux8a00}}
+
+計算器程式期末報告前言
+
+前言內容。
+
+~
+
+一個範例數學式：\[\beta=\cos^{-1}{\frac{L0^{2}+d_{AB}^{2}-R0^{2}}{2\times{L0\times{d_{AB}}}}}\]
+
+~
+
+關於數學式可以參考這裡：\url{http://www.hostmath.com/}
+
+提及了某篇刊物{[}1{]}在這裡。
+
+\hypertarget{ux53efux651cux7a0bux5f0fux7cfbux7d71ux4ecbux7d39}{%
+\chapter{可攜程式系統介紹}\label{ux53efux651cux7a0bux5f0fux7cfbux7d71ux4ecbux7d39}}
+
+\hypertarget{ux555fux52d5ux8207ux95dcux9589}{%
+\section{啟動與關閉}\label{ux555fux52d5ux8207ux95dcux9589}}
+
+\begin{figure}
+\centering
+\includegraphics{./tex2pdf.17748/caf4a9154d74acc2785da5493d834ee1f5907b1f.png}
+\caption{system-1\label{fig:格子}}
+\end{figure}
+
+可攜程式:因為在不同的電腦擁有的程式也會有所不同所以使用可攜程式的話可以方便在任何電腦執行自己熟悉的程式也可使用建立自己習慣的開發環境
+
+(1)GIMP2-可以做修剪圖片或是裁切圖片
+
+DiaPortable-可繪製圖形幫助註解圖片
+
+(2)GitHub-SCM(組態管理系統)的一種 ,
+特點多人協同,gh-pages,公開(不公開要花錢)
+
+(3)Python36-在不同電腦都可以進行Python的程式開發
+
+(4)ShareX-可截取螢幕畫面 , 與錄製影片
+
+(5)Fossil-SCM(組態管理系統)的一種 , 特點Totally control
+完全可以自己控制伺服到客戶端
+
+\hypertarget{ux555fux52d5ux8207ux95dcux95892}{%
+\section{啟動與關閉2}\label{ux555fux52d5ux8207ux95dcux95892}}
+
+\begin{figure}
+\centering
+\includegraphics{./tex2pdf.17748/4cb54a5c1c7300c7281ffa6c61f663abf48448ba.png}
+\caption{system-2\label{fig:格子}}
+\end{figure}
+
+(1)miktex\_portable-包含了TeX及其相關程式 ,
+這些工具是以TeX/LaTeX所構成的
+
+(2)pandoc-2.0.2-以命令列形式實現與用戶的互動，可支援多種作業系統
+
+可攜程式系統介紹
+
+\hypertarget{calculator-ux7a0bux5f0f}{%
+\chapter{Calculator 程式}\label{calculator-ux7a0bux5f0f}}
+
+Calculator 程式細部說明
+
+\hypertarget{ux5efaux7acbux5c0dux8a71ux6846}{%
+\section{建立對話框}\label{ux5efaux7acbux5c0dux8a71ux6846}}
+
+step1
+
+\includegraphics{./tex2pdf.17748/c57e7a0fedaa64e113d47539b62000be4e322d2a.png}
+step2
+
+\begin{figure}
+\centering
+\includegraphics{./tex2pdf.17748/c25bd9e4292b8e505371b402e65eff0381a50874.png}
+\caption{newform\label{fig:新建}}
+\end{figure}
+
+step3
+
+\includegraphics{./tex2pdf.17748/b71e9cd709a8d6470e96d63a7b4be8086a2eafc2.png}
+step4
+
+\begin{figure}
+\centering
+\includegraphics{./tex2pdf.17748/b6c557891824123971bab6160b93017a946ced9a.png}
+\caption{Dialog into ui\label{fig:放入}}
+\end{figure}
+
+step5
+
+\begin{figure}
+\centering
+\includegraphics{./tex2pdf.17748/abab883aad37fc9d5d8430daf240ac70fd7b79ca.png}
+\caption{qtdesigner\label{fig:對話框}}
+\end{figure}
+
+\hypertarget{ux5efaux7acbux6309ux9215}{%
+\section{建立按鈕}\label{ux5efaux7acbux6309ux9215}}
+
+step1
+
+\begin{figure}
+\centering
+\includegraphics{./tex2pdf.17748/c6dc00a1f7430efee507473486a08a0400a99cfe.png}
+\caption{button\label{fig:格子}}
+\end{figure}
+
+step2
+
+\begin{figure}
+\centering
+\includegraphics{./tex2pdf.17748/5adf72ef7cc9374dcc293eda6ce7834a69361a58.png}
+\caption{grid\label{fig:排版}}
+\end{figure}
+
+以上是由Qtdesigner製作
+
+Qtdesigner詳細請查閱第五章
+
+\hypertarget{ux5efaux7acbux7a0bux5f0fux78bc}{%
+\section{建立程式碼}\label{ux5efaux7acbux7a0bux5f0fux78bc}}
+
+\textbf{40623220}
+
+\textbf{40623221}
+
+\textbf{40623228}
+
+數字邏輯
+
+\begin{figure}
+\centering
+\includegraphics{./tex2pdf.17748/1da0880ceef848e1a714ff840c5026809f80889f.png}
+\caption{digitCilcked\label{fig:digitCilcked}}
+\end{figure}
+
+加減邏輯
+\includegraphics{./tex2pdf.17748/e1435c963e5def4df9b9df0059886bf63ffed823.png}
+等號邏輯
+
+\begin{figure}
+\centering
+\includegraphics{./tex2pdf.17748/5c28660f5df2d159260b5d1a9005b0a6d83b3226.png}
+\caption{equalClicked\label{fig:equalClicked}}
+\end{figure}
+
+\textbf{40623229}
+
+\textbf{40623230}
+
+\hypertarget{python-ux7a0bux5f0fux8a9eux6cd5}{%
+\chapter{Python 程式語法}\label{python-ux7a0bux5f0fux8a9eux6cd5}}
+
+Python 程式語法
+
+\hypertarget{ux8b8aux6578ux547dux540d}{%
+\section{變數命名}\label{ux8b8aux6578ux547dux540d}}
+
+Python3 變數命名規則與關鍵字
+
+一、Python 英文變數命名規格
+
+1.變數必須以英文字母大寫或小寫或底線開頭
+
+2.變數其餘字元可以是英文大小寫字母, 數字或底線
+
+3.變數區分英文大小寫
+
+4.變數不限字元長度
+
+5.不可使用關鍵字當作變數名稱
+
+二、Python3 的程式關鍵字, 使用者命名變數時, 必須避開下列保留字.
+
+1.Python keywords: {[}`False', `None', `True', `and', `as', `assert',
+`break', `class', `continue', `def', `del', `elif', `else', `except',
+`finally', `for', `from', `global', `if', `import', `in', `is',
+`lambda', `nonlocal', `not', `or', `pass', `raise', `return', `try',
+`while', `with', `yield'{]}
+
+2.選擇好的變數名稱:
+
+使用有意義且適當長度的變數名稱， 例如: 使用 length 代表長度,
+不要單獨使用 l 或 L, 也不要使用 this\_is\_the\_length
+程式前後變數命名方式盡量一致, 例如: 使用 rect\_length 或 RectLength
+用底線開頭的變數通常具有特殊意義
+
+\hypertarget{print-ux51fdux5f0f}{%
+\section{print 函式}\label{print-ux51fdux5f0f}}
+
+\hypertarget{ux91cdux8907ux8ff4ux5708}{%
+\section{重複迴圈}\label{ux91cdux8907ux8ff4ux5708}}
+
+\hypertarget{ux5224ux65b7ux5f0f}{%
+\section{判斷式}\label{ux5224ux65b7ux5f0f}}
+
+\hypertarget{ux6578ux5217}{%
+\section{數列}\label{ux6578ux5217}}
+
+\hypertarget{pyqt5-ux7c21ux4ecb}{%
+\chapter{PyQt5 簡介}\label{pyqt5-ux7c21ux4ecb}}
+
+說明 PyQt5 基本架構與程式開發流程
+
+\hypertarget{pyqt5-ux67b6ux69cb}{%
+\section{PyQt5 架構}\label{pyqt5-ux67b6ux69cb}}
+
+PyQt5-GUI frame work , 圖形使用者介面軟體框架 ,可以快速製做GUI界面程式 ,
+是由一系列Python组成。超過620個類，6000和函數和方法
+
+Qt5原本是C++語法 之後用Python製作而成PyQt
+
+Qt採用了signal和slot的概念來處理GUI程式中的用戶事件。
+PyQt同樣支援這種方法。
+任何Python類型都可以定義signal和slot，並與GUI控制項的signal和slot相連線。
+
+\hypertarget{ux5fc3ux5f97}{%
+\chapter{心得}\label{ux5fc3ux5f97}}
+
+期末報告心得
+
+\hypertarget{fossil-scm}{%
+\section{Fossil SCM}\label{fossil-scm}}
+
+\hypertarget{ux7db2ux8a8cux5fc3ux5f97}{%
+\section{網誌心得}\label{ux7db2ux8a8cux5fc3ux5f97}}
+
+\hypertarget{github-ux5354ux540cux5009ux5132}{%
+\section{Github 協同倉儲}\label{github-ux5354ux540cux5009ux5132}}
+
+\hypertarget{ux5b78ux54e1ux5fc3ux5f97}{%
+\section{學員心得}\label{ux5b78ux54e1ux5fc3ux5f97}}
+
+說明各學員任務與執行過程
+
+\hypertarget{ux7d50ux8ad6}{%
+\chapter{結論}\label{ux7d50ux8ad6}}
+
+期末報告結論
+
+\hypertarget{ux7d50ux8ad6ux8207ux5efaux8b70}{%
+\section{結論與建議}\label{ux7d50ux8ad6ux8207ux5efaux8b70}}
+
+結論與建議內容
+
+\hypertarget{ux53c3ux8003ux6587ux737b}{%
+\chapter*{參考文獻}\label{ux53c3ux8003ux6587ux737b}}
+\addcontentsline{toc}{chapter}{參考文獻}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-myart}{}%
+{[}1{]} 作者名字, ``標題,'' \emph{刊物名稱}, vol. 4, no. 2, pp.
+201--213, Jul. 1993.
+
+
+\end{document}

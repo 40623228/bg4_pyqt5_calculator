@@ -5,19 +5,20 @@ Calculator 程式細部說明
 
 建立對話框
 ---
+
 step1
 
 ![newproject][]
 step2
 
-![newform][]
+ ![newform][]
 
 step3
 
 ![mk][]
 step4
 
-![Dialog into ui][]
+ ![Dialog into ui][]
 
 step5
 
@@ -30,9 +31,15 @@ step5
 [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
 
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
+[newproject]: ./images/newproject.png {#fig:表單}
 
+[newform]: ./images/newform.png {#fig:新建}
 
+[mk]: ./images/mk.png {#fig:建立}
+
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
 
 建立按鈕
 ---
@@ -63,6 +70,7 @@ __40623220__
 
 變號
 
+<<<<<<< HEAD
 ![change][]
 
 計算
@@ -71,6 +79,19 @@ __40623220__
 
 中斷運算
 
+=======
+__40623221__
+變號
+
+![change][]
+
+計算
+
+![calculator][]
+
+中斷運算
+
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
 ![abo][]
 
 
@@ -137,8 +158,49 @@ __40623221__
 
 __40623228__
 
+數字邏輯
 
+<<<<<<< HEAD
+=======
+![digitCilcked]
+加減邏輯
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
 
+![additiveOperatorCliked]
+
+等號邏輯
+
+![equalClicked]
+
+__40623229__
+      
+       '''回復鍵按下的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            return
+ 
+        text = self.display.text()[:-1]
+        if not text:
+            text = '0'
+            self.waitingForOperand = True
+ 
+        self.display.setText(text)
+        if self.waitingForOperand:
+            return
+    def clear(self):
+    
+__40623229__
+     
+      '''清除鍵按下後的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            return
+ 
+        self.display.setText('0')
+        
+        self.waitingForOperand = True
+        
+    def clearAll(self):
 
 
 
@@ -188,6 +250,9 @@ __40623230__
         
         說明:按下M+鍵會把當前數字與記憶的數字相加後並記憶
 
+[equalClicked]: ./images/equalClicked.png {#fig:equalClicked}
+[additiveOperatorCliked]: ./images/additiveOperatorCliked.png {#fig:additiveOperatorCliked}
+[digitCilcked]: ./images/digitCilcked.png {#fig:digitCilcked}
 
 
 
@@ -215,6 +280,11 @@ __40623230__
 
 
 
+
+[mult]: ./images/mult.png {#fig:乘除}
+[change]: ./images/change.png {#fig:變號}
+[calculator]: ./images/calculator.png {#fig:計算}
+[abo]: ./images/abo.png {#fig:中斷運算}
 
 [mult]: ./images/mult.png {#fig:乘除}
 [change]: ./images/change.png {#fig:變號}

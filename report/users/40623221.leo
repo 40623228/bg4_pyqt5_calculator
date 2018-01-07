@@ -61,6 +61,22 @@
 <v t="leo.20180108015404.5"><vh>new:Python 程式語法介紹</vh></v>
 </v>
 </v>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<v t="leo.20180108042731.2" a="E"><vh>Recovered Nodes</vh>
+<v t="leo.20180108042731.3"><vh>Recovered node "摘要" from @clean cover_and_abstract.md</vh>
+<v t="leo.20180108042731.4"><vh>old:摘要</vh></v>
+<v t="leo.20180108042731.5"><vh>new:摘要</vh></v>
+=======
+<v t="leo.20180108040005.1" a="E"><vh>Recovered Nodes</vh>
+<v t="leo.20180108040005.2"><vh>Recovered node "計算機程式內容" from @clean calculator.md</vh>
+<v t="leo.20180108040005.3"><vh>old:計算機程式內容</vh></v>
+<v t="leo.20180108040005.4"><vh>new:計算機程式內容</vh></v>
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
+</v>
+</v>
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
 </vnodes>
 <tnodes>
 <t tx="40323230.20170123213451.1">@language python
@@ -197,8 +213,12 @@ QLineEdit#editorLabel {
 vertical: body pane on the botton</t>
 <t tx="ahshoe.20170317115820.1">---
 abstract: |
+<<<<<<< HEAD
     這裡是摘要內容。A pipe character, followed by an indented block of text is treated as a literal block, in which newlines are preserved throughout the block, including the final newline.
     
+=======
+    這裡是摘要內容。
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
     + 以 YAML 的方式插入。
     + The '+' indicator says to keep newlines at the end of text blocks.
     + 使用 Markdown 語法。
@@ -442,6 +462,7 @@ python的數列是一個[   ]
 [s]: ./images/s.png {#fig:數列}
 
 </t>
+<<<<<<< HEAD
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
@@ -548,10 +569,300 @@ print() 為 Python 程式語言中用來列印數值或字串的函式, 其中�
 [for-1]: ./images/for-1.png {#fig:簡單迴圈}
 [for]: ./images/for.png {#fig:迴圈}
 
+=======
+<<<<<<< HEAD
+<t tx="leo.20180108042731.2"></t>
+<t tx="leo.20180108042731.3">(uncached) ahshoe.20170317115820.1
+Diff...
+  ---
+  abstract: |
+-     這裡是摘要內容。
++     這裡是摘要內容。A pipe character, followed by an indented block of text is treated as a literal block, in which newlines are preserved throughout the block, including the final newline.
++     
+      + 以 YAML 的方式插入。
+      + The '+' indicator says to keep newlines at the end of text blocks.
+      + 使用 Markdown 語法。
+      + 前面使用加號
+      
+      本研究的重點在於 ...
+  ---
+  
+  
+</t>
+<t tx="leo.20180108042731.4">---
+abstract: |
+    這裡是摘要內容。A pipe character, followed by an indented block of text is treated as a literal block, in which newlines are preserved throughout the block, including the final newline.
+    
+    + 以 YAML 的方式插入。
+    + The '+' indicator says to keep newlines at the end of text blocks.
+    + 使用 Markdown 語法。
+    + 前面使用加號
+    
+    本研究的重點在於 ...
+---
+
+
+</t>
+<t tx="leo.20180108042731.5">---
+abstract: |
+    這裡是摘要內容。
+    + 以 YAML 的方式插入。
+    + The '+' indicator says to keep newlines at the end of text blocks.
+    + 使用 Markdown 語法。
+    + 前面使用加號
+    
+    本研究的重點在於 ...
+---
+
+=======
+<t tx="leo.20180108040005.1"></t>
+<t tx="leo.20180108040005.2">(uncached) yen.20170429215851.1
+Diff...
+  建立對話框
+  ---
+  step1
+  
+  ![newproject][]
+  step2
+  
+  ![newform][]
+  
+  step3
+  
+  ![mk][]
+  step4
+  
+  ![Dialog into ui][]
+  
+  step5
+  
+  ![qtdesigner][]
+  
+  [newproject]: ./images/newproject.png {#fig:表單}
+  [newform]: ./images/newform.png {#fig:新建}
+  [mk]: ./images/mk.png {#fig:建立}
+  [Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+  [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+  
+  
+  
+  
+  
+  
+  建立按鈕
+  ---
+  step1
+  
+  ![button][]
+  
+  step2
+  
+  ![grid][]
+  
+  以上是由Qtdesigner製作
+  
+  Qtdesigner詳細請查閱第五章
+  
+  [button]: ./images/button.png {#fig:格子}
+  [grid]: ./images/grid.png {#fig:排版}
+  
+  建立程式碼
+  ---
+  __40623220__
+  
+- *
+  
+- 乘除
+  
+- ![mult][]
+- 
+- 變號
+- 
+- ![change][]
+- 
+- 計算
+- 
+- ![calculator][]
+- 
+- 中斷運算
+- 
+- ![abo][]
+  
+  
+  __40623221__
+      def unaryOperatorClicked(self):
+  #40623221
+          '''單一運算元按下後處理方法'''
+          #pass
+          clickedButton = self.sender()
+          clickedOperator = clickedButton.text()
+          operand = float(self.display.text())
+  
+          if clickedOperator == "Sqrt":
+              if operand &lt; 0.0:
+                  self.abortOperation()
+                  return
+  
+              result = math.sqrt(operand)
+          elif clickedOperator == "X^2":
+              result = math.pow(operand, 2.0)
+          elif clickedOperator == "1/x":
+              if operand == 0.0:
+                  self.abortOperation()
+                  return
+  
+              result = 1.0 / operand
+  
+          self.display.setText(str(result))
+          self.waitingForOperand = True
+-         
+          說明:按下1/x若分母為0則需中斷運算,若按下Sqrt且數字小於0也是中斷運算,
+          按下X^2若數字為2則需運算2的平方..
+          
+          def pointClicked(self):
+  #40623221
+          '''小數點按下.後的處理方法'''
+          #pass
+          if self.waitingForOperand:
+              self.display.setText('0')
+   
+          if "." not in self.display.text():
+              self.display.setText(self.display.text() + ".")
+   
+          self.waitingForOperand = False
+-         
+          說明:若出現display,且在數字0後面沒出現小數點則將小數點顯示出來..
+          
+           def clearAll(self):
+  #40623221
+          '''全部清除鍵按下後的處理方法'''
+          #pass
+          self.sumSoFar = 0.0
+          self.factorSoFar = 0.0
+          self.pendingAdditiveOperator = ''
+          self.pendingMultiplicativeOperator = ''
+          self.display.setText('0')
+          self.waitingForOperand = True
+-         
+          說明:按下clearall則把全部運算停止並將全部情除最後出現0
+          
+  
+  
+  
+  
+  __40623228__
+  
+  
+  
+  
+  
+  
+  
+  __40623229__
+  
+  
+  
+  
+  
+  
+  
+  __40623230__
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+- [mult]: ./images/mult.png {#fig:乘除}
+- [change]: ./images/change.png {#fig:變號}
+- [calculator]: ./images/calculator.png {#fig:計算}
+- [abo]: ./images/abo.png {#fig:中斷運算}
+  
++ 
++ 
+</t>
+<t tx="leo.20180108040005.3">建立對話框
+---
+step1
+
+![newproject][]
+step2
+
+![newform][]
+
+step3
+
+![mk][]
+step4
+
+![Dialog into ui][]
+
+step5
+
+![qtdesigner][]
+
+[newproject]: ./images/newproject.png {#fig:表單}
+[newform]: ./images/newform.png {#fig:新建}
+[mk]: ./images/mk.png {#fig:建立}
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
 
 
 
+
+
+建立按鈕
+---
+step1
+
+![button][]
+
+step2
+
+![grid][]
+
+以上是由Qtdesigner製作
+
+Qtdesigner詳細請查閱第五章
+
+[button]: ./images/button.png {#fig:格子}
+[grid]: ./images/grid.png {#fig:排版}
+
+建立程式碼
+---
+__40623220__
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+
+
+
+
+<<<<<<< HEAD
 判斷式
 ---
 if 判斷式1:
@@ -625,69 +936,7 @@ Table: 價目表 {#tbl:價目表}
 
 [http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
 
-</t>
-<t tx="yen.20170429215617.1">Calculator 程式
-===
-
-Calculator 程式細部說明
-
-@others
-</t>
-<t tx="yen.20170429215851.1">建立對話框
----
-step1
-
-![newproject][]
-step2
-
-![newform][]
-
-step3
-
-![mk][]
-step4
-
-![Dialog into ui][]
-
-step5
-
-![qtdesigner][]
-
-[newproject]: ./images/newproject.png {#fig:表單}
-[newform]: ./images/newform.png {#fig:新建}
-[mk]: ./images/mk.png {#fig:建立}
-[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
-[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
-
-
-
-
-
-
-建立按鈕
----
-step1
-
-![button][]
-
-step2
-
-![grid][]
-
-以上是由Qtdesigner製作
-
-Qtdesigner詳細請查閱第五章
-
-[button]: ./images/button.png {#fig:格子}
-[grid]: ./images/grid.png {#fig:排版}
-
-建立程式碼
----
-__40623220__
-
-
-
-
+=======
 
 __40623221__
     def unaryOperatorClicked(self):
@@ -799,11 +1048,649 @@ __40623230__
 
 
 </t>
+<t tx="leo.20180108040005.4">建立對話框
+---
+step1
+
+![newproject][]
+step2
+
+![newform][]
+
+step3
+
+![mk][]
+step4
+
+![Dialog into ui][]
+
+step5
+
+![qtdesigner][]
+
+[newproject]: ./images/newproject.png {#fig:表單}
+[newform]: ./images/newform.png {#fig:新建}
+[mk]: ./images/mk.png {#fig:建立}
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+
+
+
+
+
+
+建立按鈕
+---
+step1
+
+![button][]
+
+step2
+
+![grid][]
+
+以上是由Qtdesigner製作
+
+Qtdesigner詳細請查閱第五章
+
+[button]: ./images/button.png {#fig:格子}
+[grid]: ./images/grid.png {#fig:排版}
+
+建立程式碼
+---
+__40623220__
+
+*
+
+乘除
+
+![mult][]
+
+變號
+
+![change][]
+
+計算
+
+![calculator][]
+
+中斷運算
+
+![abo][]
+
+
+__40623221__
+    def unaryOperatorClicked(self):
+#40623221
+        '''單一運算元按下後處理方法'''
+        #pass
+        clickedButton = self.sender()
+        clickedOperator = clickedButton.text()
+        operand = float(self.display.text())
+
+        if clickedOperator == "Sqrt":
+            if operand &lt; 0.0:
+                self.abortOperation()
+                return
+
+            result = math.sqrt(operand)
+        elif clickedOperator == "X^2":
+            result = math.pow(operand, 2.0)
+        elif clickedOperator == "1/x":
+            if operand == 0.0:
+                self.abortOperation()
+                return
+
+            result = 1.0 / operand
+
+        self.display.setText(str(result))
+        self.waitingForOperand = True
+        
+        說明:按下1/x若分母為0則需中斷運算,若按下Sqrt且數字小於0也是中斷運算,
+        按下X^2若數字為2則需運算2的平方..
+        
+        def pointClicked(self):
+#40623221
+        '''小數點按下.後的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            self.display.setText('0')
+ 
+        if "." not in self.display.text():
+            self.display.setText(self.display.text() + ".")
+ 
+        self.waitingForOperand = False
+        
+        說明:若出現display,且在數字0後面沒出現小數點則將小數點顯示出來..
+        
+         def clearAll(self):
+#40623221
+        '''全部清除鍵按下後的處理方法'''
+        #pass
+        self.sumSoFar = 0.0
+        self.factorSoFar = 0.0
+        self.pendingAdditiveOperator = ''
+        self.pendingMultiplicativeOperator = ''
+        self.display.setText('0')
+        self.waitingForOperand = True
+        
+        說明:按下clearall則把全部運算停止並將全部情除最後出現0
+        
+
+
+
+
+__40623228__
+
+
+
+
+
+
+
+__40623229__
+
+
+
+
+
+
+
+__40623230__
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[mult]: ./images/mult.png {#fig:乘除}
+[change]: ./images/change.png {#fig:變號}
+[calculator]: ./images/calculator.png {#fig:計算}
+[abo]: ./images/abo.png {#fig:中斷運算}
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
+
+</t>
+<t tx="yen.20170429103742.1"></t>
+<t tx="yen.20170429103940.1"></t>
+<t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
+
+各自選擇要編輯的 .md 檔案, 可以使用 @edit 或 @clean 節點編輯指令
+
+除非必要否則不更動 markdown 目錄下的 template.tex 檔案</t>
+<t tx="yen.20170429214838.1">前言
+===
+
+計算器程式期末報告前言
+
+@others</t>
+<t tx="yen.20170429214838.3">前言內容。
+
+\ 
+
+一個範例數學式：$$\beta=\cos^{-1}{\frac{L0^{2}+d_{AB}^{2}-R0^{2}}{2\times{L0\times{d_{AB}}}}}$$
+
+\ 
+
+關於數學式可以參考這裡：[http://www.hostmath.com/][]
+
+[http://www.hostmath.com/]: http://www.hostmath.com/
+
+提及了某篇刊物[@myart]在這裡。
+</t>
+<t tx="yen.20170429214845.1"></t>
+<t tx="yen.20170429215041.1">
+
+可攜程式系統介紹
+===
+@others
+</t>
+<t tx="yen.20170429215130.1">啟動與關閉
+---
+![system-1]
+
+
+可攜程式:因為在不同的電腦擁有的程式也會有所不同所以使用可攜程式的話可以方便在任何電腦執行自己熟悉的程式也可使用建立自己習慣的開發環境
+
+(1)GIMP2-可以做修剪圖片或是裁切圖片
+
+DiaPortable-可繪製圖形幫助註解圖片
+
+(2)GitHub-SCM(組態管理系統)的一種 , 特點多人協同,gh-pages,公開(不公開要花錢)
+
+(3)Python36-在不同電腦都可以進行Python的程式開發
+
+(4)ShareX-可截取螢幕畫面 , 與錄製影片
+
+(5)Fossil-SCM(組態管理系統)的一種 , 特點Totally control 完全可以自己控制伺服到客戶端
+
+啟動與關閉2
+---
+![system-2]
+
+(1)miktex_portable-包含了TeX及其相關程式 , 這些工具是以TeX/LaTeX所構成的
+
+(2)pandoc-2.0.2-以命令列形式實現與用戶的互動，可支援多種作業系統
+
+
+[system-1]: ./images/system-1.png {#fig:格子}
+[system-2]: ./images/system-2.png {#fig:格子}
+可攜程式系統介紹
+
+</t>
+<t tx="yen.20170429215252.1">Python 程式語法
+===
+
+Python 程式語法
+
+@others
+</t>
+<t tx="yen.20170429215308.1">變數命名
+---
+Python3 變數命名規則與關鍵字
+
+一、Python 英文變數命名規格
+
+1.變數必須以英文字母大寫或小寫或底線開頭
+
+2.變數其餘字元可以是英文大小寫字母, 數字或底線
+
+3.變數區分英文大小寫
+
+4.變數不限字元長度
+
+5.不可使用關鍵字當作變數名稱
+
+二、Python3 的程式關鍵字, 使用者命名變數時, 必須避開下列保留字.
+
+1.Python keywords: ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+2.選擇好的變數名稱:
+
+使用有意義且適當長度的變數名稱， 例如: 使用 length 代表長度, 不要單獨使用 l 或 L, 也不要使用 this_is_the_length
+程式前後變數命名方式盡量一致, 例如: 使用 rect_length 或 RectLength
+用底線開頭的變數通常具有特殊意義
+
+
+
+
+
+
+計算機中的迴圈
+
+![for][]
+
+[for-1]: ./images/for-1.png {#fig:簡單迴圈}
+[for]: ./images/for.png {#fig:迴圈}
+
+
+
+
+print 函式
+---
+
+重複迴圈
+---
+
+判斷式
+---
+if 判斷式1:
+    
+    要處理的指令1
+
+elif 判斷式2:
+    
+    要處理的指令2
+    
+else:
+    要處理的指令3
+            
+注意事項
+
+1.每個判斷式的結束要加:
+
+2.要處理的指令不可以用{}括起來
+
+3.最後的else可以不用加
+
+數列
+---
+python的數列是一個[   ]
+
+[  ]是容器中能放容器也能放物件和字串
+
+容器例如:list、set、dict、tuple
+
+計算機中的數列
+
+![s][]
+
+[s]: ./images/s.png {#fig:數列}
+
+</t>
+<t tx="yen.20170429215416.1"> PyQt5 簡介
+===
+
+說明 PyQt5 基本架構與程式開發流程
+
+@others
+</t>
+<t tx="yen.20170429215446.2">PyQt5 架構
+---
+PyQt5-GUI frame work , 圖形使用者介面軟體框架 ,可以快速製做GUI界面程式 , 
+是由一系列Python组成。超過620個類，6000和函數和方法
+
+Qt5原本是C++語法 之後用Python製作而成PyQt
+
+Qt採用了signal和slot的概念來處理GUI程式中的用戶事件。
+PyQt同樣支援這種方法。
+任何Python類型都可以定義signal和slot，並與GUI控制項的signal和slot相連線。
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+</t>
+<t tx="yen.20170429215617.1">Calculator 程式
+===
+
+Calculator 程式細部說明
+
+@others
+</t>
+<t tx="yen.20170429215851.1">建立對話框
+---
+<<<<<<< HEAD
+=======
+
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+step1
+
+![newproject][]
+step2
+
+<<<<<<< HEAD
+![newform][]
+=======
+ ![newform][]
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+
+step3
+
+![mk][]
+step4
+
+<<<<<<< HEAD
+![Dialog into ui][]
+=======
+ ![Dialog into ui][]
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+
+step5
+
+![qtdesigner][]
+
+[newproject]: ./images/newproject.png {#fig:表單}
+[newform]: ./images/newform.png {#fig:新建}
+[mk]: ./images/mk.png {#fig:建立}
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+
+
+<<<<<<< HEAD
+
+
+
+=======
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+
+[newproject]: ./images/newproject.png {#fig:表單}
+
+[newform]: ./images/newform.png {#fig:新建}
+
+[mk]: ./images/mk.png {#fig:建立}
+
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+
+建立按鈕
+---
+step1
+
+![button][]
+
+step2
+
+![grid][]
+
+以上是由Qtdesigner製作
+
+Qtdesigner詳細請查閱第五章
+
+[button]: ./images/button.png {#fig:格子}
+[grid]: ./images/grid.png {#fig:排版}
+
+建立程式碼
+---
+__40623220__
+
+<<<<<<< HEAD
+
+
+=======
+*
+
+乘除
+
+![mult][]
+
+變號
+
+<<<<<<< HEAD
+__40623221__
+=======
+變號
+
+=======
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
+![change][]
+
+計算
+
+![calculator][]
+<<<<<<< HEAD
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; d8408f7c1d50e8a3232e6f7ce6d1f7f659110265
+=======
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
+
+中斷運算
+
+![abo][]
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+
+
+__40623221__
+    def unaryOperatorClicked(self):
+#40623221
+        '''單一運算元按下後處理方法'''
+        #pass
+        clickedButton = self.sender()
+        clickedOperator = clickedButton.text()
+        operand = float(self.display.text())
+
+        if clickedOperator == "Sqrt":
+            if operand &lt; 0.0:
+                self.abortOperation()
+                return
+
+            result = math.sqrt(operand)
+        elif clickedOperator == "X^2":
+            result = math.pow(operand, 2.0)
+        elif clickedOperator == "1/x":
+            if operand == 0.0:
+                self.abortOperation()
+                return
+
+            result = 1.0 / operand
+
+        self.display.setText(str(result))
+        self.waitingForOperand = True
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+        說明:按下1/x若分母為0則需中斷運算,若按下Sqrt且數字小於0也是中斷運算,
+        按下X^2若數字為2則需運算2的平方..
+        
+        def pointClicked(self):
+#40623221
+        '''小數點按下.後的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            self.display.setText('0')
+ 
+        if "." not in self.display.text():
+            self.display.setText(self.display.text() + ".")
+ 
+        self.waitingForOperand = False
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+        說明:若出現display,且在數字0後面沒出現小數點則將小數點顯示出來..
+        
+         def clearAll(self):
+#40623221
+        '''全部清除鍵按下後的處理方法'''
+        #pass
+        self.sumSoFar = 0.0
+        self.factorSoFar = 0.0
+        self.pendingAdditiveOperator = ''
+        self.pendingMultiplicativeOperator = ''
+        self.display.setText('0')
+        self.waitingForOperand = True
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+        說明:按下clearall則把全部運算停止並將全部情除最後出現0
+        
+
+
+
+
+__40623228__
+
+<<<<<<< HEAD
+
+
+
+
+
+=======
+數字邏輯
+
+![digitCilcked]
+
+加減邏輯
+![additiveOperatorCliked]
+等號邏輯
+
+![equalClicked]
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+
+__40623229__
+
+
+
+
+
+
+
+__40623230__
+
+
+
+
+
+<<<<<<< HEAD
+=======
+[equalClicked]: ./images/equalClicked.png {#fig:equalClicked}
+[additiveOperatorCliked]: ./images/additiveOperatorCliked.png {#fig:additiveOperatorCliked}
+[digitCilcked]: ./images/digitCilcked.png {#fig:digitCilcked}
+
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
+[mult]: ./images/mult.png {#fig:乘除}
+[change]: ./images/change.png {#fig:變號}
+[calculator]: ./images/calculator.png {#fig:計算}
+[abo]: ./images/abo.png {#fig:中斷運算}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+
+</t>
 <t tx="yen.20170429215922.1">心得
 ===
 
 期末報告心得
 
+<<<<<<< HEAD
 @others</t>
 <t tx="yen.20170429220001.1">Fossil SCM
 ---40623221  蔡和勳
@@ -820,16 +1707,135 @@ Github 協同倉儲
 
 學員心得
 ---40623221  蔡和勳
+=======
+@others
+</t>
+<t tx="yen.20170429220001.1">Fossil SCM
+---
+<<<<<<< HEAD
+40623220 蔡崇廷
+學習到如何用指令維護倉儲還有 wiki 和 timeline 使用
+
+40623221  蔡和勳
+fossil 是比較簡單的一些指令
+所以一開始我們已fossil當基礎練習了半學期將指令弄熟了其實跟github的指令是大同小異
+=======
+40623220蔡崇廷
+
+學習到如何用指令維護倉儲還有wiki和timeline使用
+
+40623221 蔡和勳 
+
+fossil 是比較簡單的一些指令所以一開始我們已fossil 當基礎練習了半學期將指令弄熟了其實跟 github 的指令是大同小異
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
+
+40623228  陳永錩
+Fossil使用起來比之前用雲端軟體的效率及感覺 有很大的不一樣以版次來說能夠在每次都能做成一種版次就比雲端更可以處存自己設計的東西
+
+網誌心得
+<<<<<<< HEAD
+--
+40623220 蔡崇廷
+將自己每周的學習進度記錄在網誌上, 能夠為自己的學習能夠有個回想
+
+40623221 蔡和勳
+=======
+---
+40623220蔡崇廷
+
+將自己每周的學習進度記錄在網誌上,能夠為自己的學習能夠有個回想
+
+40623221 蔡和勳
+
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
+將平常上課所學的指令及程式碼運用讓自己的網誌可以更新
+
+40623228  陳永錩
+在每次上課都做一次網誌想筆記一樣 有效的將遇到的問題及學過的東西記錄下來
+
+Github 協同倉儲
+---
+<<<<<<< HEAD
+40623220 蔡崇廷
+學到如何在 github 建立倉儲, 也學到如何與其他人協同做報告跟計算機的專題, 也
+知道有衝突時該如何解決
+
+40623221  蔡和勳
+透過與組員一起寫計算機程式能更快解決問題,協同報告可以自動編排也很方便,不用再將文字檔拉來拉去
+=======
+40623220蔡崇廷
+
+學到如何在github建立倉儲,也學到如何與其他人協同做報告跟計算機的專題,也知道有衝突時該如何解決
+
+40623221 蔡和勳
+
+透過與組員一起寫計算機程式能更快解決問題, 協同報告可以自動編排也很方便, 不用再將文字檔拉來拉去
+
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
+
+40623228  陳永錩
+雖然說跟Fossil一樣是SCM的東西可是加上了多人協同就有很大的不能像是怎麼解決衝突等等
+
+學員心得
+---
+<<<<<<< HEAD
+40623220 蔡崇廷
+從一開始的不知道這節課要幹嘛漸漸的進入狀況也能每周把自己的學習做個紀錄
+
+40623221  蔡和勳
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
 雖然程式碼很多很嚇人,
 但是如果有看老師教學影片就可以很快進入狀況可以學很快,
 自己在花點時間就可以將程式完成
 
+<<<<<<< HEAD
 
 說明各學員任務與執行過程
 --40623221  蔡和勳
 組員所負責的計算機程式內容不一樣
 若前面的按鈕和排版沒做好後面就沒辦法接下去做,還有按鈕名稱也很重要,
 錯誤的話會沒辦法執行計畫</t>
+=======
+40623228  陳永錩
+在經過整學期的課程我覺得,程式會是必學的一項技能,有了程式的幫忙才可以有效率的完成設計上的事情
+
+說明各學員任務與執行過程
+--
+說明各學員任務與執行過程
+40623220 蔡崇廷
+做計算機和報告不像前七周是自己做自己的而現在是必須與同學協同所以更需要
+討論也必須更注意排版不然一定會亂掉
+
+40623221  蔡和勳
+組員所負責的計算機程式內容不一樣
+若前面的按鈕和排版沒做好後面就沒辦法接下去做,還有按鈕名稱也很重要,
+錯誤的話會沒辦法執行計畫
+
+40623228  陳永錩
+必須將流程已有條理的方式 逐步的完成不然很容易亂了手腳</t>
+=======
+40623220蔡崇廷
+
+從一開始的不知道這節課要幹嘛漸漸的進入狀況也能每周把自己的學習做個紀錄
+
+40623221 蔡和勳
+雖然程式碼很多很嚇人, 但是如果有看老師教學影片就可以很快進入狀況可以學很快, 自己在花點時間就可以將程式完成
+
+說明各學員任務與執行過程
+
+40623220蔡崇廷
+
+做計算機和報告不像前七周是自己做自己的而現在是必須與同學協同所以更需要討論也必須更注意排版不然一定會亂掉
+
+40623221 蔡和勳
+組員所負責的計算機程式內容不一樣若前面的按鈕和排版沒做好後面就沒辦法接下去做, 還有按鈕名稱也很重要, 錯誤的話會沒辦法執行計畫
+
+
+
+
+</t>
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
 <t tx="yen.20170429220128.1">結論
 ===
 
@@ -837,8 +1843,12 @@ Github 協同倉儲
 
 @others</t>
 <t tx="yen.20170429220137.1">結論與建議
+<<<<<<< HEAD
 ---40623221  蔡和勳
 在這堂課學到如何運用自己的時間以及倉儲編輯還有fossil和github的相關指令,還知道隨身系統搞好只要帶著隨身碟不管到哪裡都可以工作
+=======
+
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
 
 結論與建議內容</t>
 <t tx="yen.20170429220335.1">附錄

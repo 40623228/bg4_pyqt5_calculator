@@ -27,7 +27,14 @@
 </v>
 <v t="leo.20171119234822.1" a="E"><vh>各章節內容</vh>
 <v t="yen.20170429214845.1" a="E"><vh>@path paragraph</vh>
+<<<<<<< HEAD
+<v t="leo.20180108005414.1" a="E"><vh>@clean portable_system.md</vh>
+<v t="leo.20180108005414.2"><vh>可攜程式系統介紹</vh></v>
+</v>
+<v t="yen.20170429214838.1" a="E"><vh>@clean introduction.md</vh>
+=======
 <v t="yen.20170429214838.1"><vh>@clean introduction.md</vh>
+>>>>>>> d8408f7c1d50e8a3232e6f7ce6d1f7f659110265
 <v t="yen.20170429214838.3"><vh>前言內容</vh></v>
 </v>
 <v t="yen.20170429215252.1" a="E"><vh>@clean python_introduction.md</vh>
@@ -40,13 +47,13 @@
 <v t="yen.20170429215851.1"><vh>計算機程式內容</vh></v>
 <v t="leo.20180107183709.1"><vh>計算機程式內容</vh></v>
 </v>
-<v t="yen.20170429215922.1" a="E"><vh>計算機程式內容</vh>
+<v t="yen.20170429215922.1" a="E"><vh>@clean discussion.md</vh>
 <v t="yen.20170429220001.1"><vh>程式開發心得</vh></v>
 </v>
 <v t="yen.20170429220128.1" a="E"><vh>@clean results.md</vh>
 <v t="yen.20170429220137.1"><vh>期末報告結論</vh></v>
 </v>
-<v t="yen.20170429220335.1"><vh>@clean appendix.md</vh>
+<v t="yen.20170429220335.1" a="E"><vh>@clean appendix.md</vh>
 <v t="yen.20170429220335.2"><vh>附錄</vh></v>
 </v>
 </v>
@@ -190,8 +197,7 @@ QLineEdit#editorLabel {
 vertical: body pane on the botton</t>
 <t tx="ahshoe.20170317115820.1">---
 abstract: |
-    這裡是摘要內容。A pipe character, followed by an indented block of text is treated as a literal block, in which newlines are preserved throughout the block, including the final newline.
-    
+    這裡是摘要內容。
     + 以 YAML 的方式插入。
     + The '+' indicator says to keep newlines at the end of text blocks.
     + 使用 Markdown 語法。
@@ -224,38 +230,18 @@ abstract: |
 
 說明 PyQt5 基本架構與程式開發流程
 
-@others</t>
+@others
+</t>
 <t tx="leo.20180107125327.2">PyQt5 架構
 ---
+PyQt5-GUI frame work , 圖形使用者介面軟體框架 ,可以快速製做GUI界面程式 , 
+是由一系列Python组成。超過620個類，6000和函數和方法
 
-C 的內容
+Qt5原本是C++語法 之後用Python製作而成PyQt
 
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
-
+Qt採用了signal和slot的概念來處理GUI程式中的用戶事件。
+PyQt同樣支援這種方法。
+任何Python類型都可以定義signal和slot，並與GUI控制項的signal和slot相連線。
 </t>
 <t tx="leo.20180107183709.1">建立按鈕
 ---
@@ -284,6 +270,7 @@ __40623220__
 
 ![mult][]
 
+<<<<<<< HEAD
 變號
 
 ![change][]
@@ -354,17 +341,97 @@ __40623221__
         
         說明:按下clearall則把全部運算停止並將全部情除最後出現0
         
+=======
+<<<<<<< HEAD
+__40623221__
+=======
+變號
+
+![change][]
+>>>>>>> 48a82270a9dacd2064f0e678dcd4490743b25654
+
+計算
+
+![calculator][]
+>>>>>>> d8408f7c1d50e8a3232e6f7ce6d1f7f659110265
+
+中斷運算
+
+![abo][]
+
+
+__40623221__
+    def unaryOperatorClicked(self):
+#40623221
+        '''單一運算元按下後處理方法'''
+        #pass
+        clickedButton = self.sender()
+        clickedOperator = clickedButton.text()
+        operand = float(self.display.text())
+
+        if clickedOperator == "Sqrt":
+            if operand &lt; 0.0:
+                self.abortOperation()
+                return
+
+            result = math.sqrt(operand)
+        elif clickedOperator == "X^2":
+            result = math.pow(operand, 2.0)
+        elif clickedOperator == "1/x":
+            if operand == 0.0:
+                self.abortOperation()
+                return
+
+            result = 1.0 / operand
+
+        self.display.setText(str(result))
+        self.waitingForOperand = True
+        
+        說明:按下1/x若分母為0則需中斷運算,若按下Sqrt且數字小於0也是中斷運算,
+        按下X^2若數字為2則需運算2的平方..
+        
+        def pointClicked(self):
+#40623221
+        '''小數點按下.後的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            self.display.setText('0')
+ 
+        if "." not in self.display.text():
+            self.display.setText(self.display.text() + ".")
+ 
+        self.waitingForOperand = False
+        
+        說明:若出現display,且在數字0後面沒出現小數點則將小數點顯示出來..
+        
+         def clearAll(self):
+#40623221
+        '''全部清除鍵按下後的處理方法'''
+        #pass
+        self.sumSoFar = 0.0
+        self.factorSoFar = 0.0
+        self.pendingAdditiveOperator = ''
+        self.pendingMultiplicativeOperator = ''
+        self.display.setText('0')
+        self.waitingForOperand = True
+        
+        說明:按下clearall則把全部運算停止並將全部情除最後出現0
+        
 
 
 
 
 __40623228__
 
+數字邏輯
 
+![digitCilcked]
 
+加減邏輯
+![additiveOperatorCliked]
+等號邏輯
 
-
-
+![equalClicked]
 
 __40623229__
 
@@ -379,26 +446,51 @@ __40623230__
 
 
 
+[equalClicked]: ./images/equalClicked.png {#fig:equalClicked}
+[additiveOperatorCliked]: ./images/additiveOperatorCliked.png {#fig:additiveOperatorCliked}
+[digitCilcked]: ./images/digitCilcked.png {#fig:digitCilcked}</t>
+<t tx="leo.20180108005414.1">@language md
 
 
+可攜程式系統介紹
+===
+@others
+可攜程式系統介紹
+
+@tabwidth -4
+</t>
+<t tx="leo.20180108005414.2">啟動與關閉
+---
+![system-1]
 
 
+可攜程式:因為在不同的電腦擁有的程式也會有所不同所以使用可攜程式的話可以方便在任何電腦執行自己熟悉的程式也可使用建立自己習慣的開發環境
+
+(1)GIMP2-可以做修剪圖片或是裁切圖片
+
+DiaPortable-可繪製圖形幫助註解圖片
+
+(2)GitHub-SCM(組態管理系統)的一種 , 特點多人協同,gh-pages,公開(不公開要花錢)
+
+(3)Python36-在不同電腦都可以進行Python的程式開發
+
+(4)ShareX-可截取螢幕畫面 , 與錄製影片
+
+(5)Fossil-SCM(組態管理系統)的一種 , 特點Totally control 完全可以自己控制伺服到客戶端
+
+啟動與關閉2
+---
+![system-2]
+
+(1)miktex_portable-包含了TeX及其相關程式 , 這些工具是以TeX/LaTeX所構成的
+
+(2)pandoc-2.0.2-以命令列形式實現與用戶的互動，可支援多種作業系統
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<<<<<<< HEAD
+[system-1]: ./images/system-1.png {#fig:格子}
+[system-2]: ./images/system-2.png {#fig:格子}</t>
+=======
 
 
 
@@ -411,7 +503,14 @@ __40623230__
 [calculator]: ./images/calculator.png {#fig:計算}
 [abo]: ./images/abo.png {#fig:中斷運算}
 
+
+[mult]: ./images/mult.png {#fig:乘除}
+[change]: ./images/change.png {#fig:變號}
+[calculator]: ./images/calculator.png {#fig:計算}
+[abo]: ./images/abo.png {#fig:中斷運算}
+
 </t>
+>>>>>>> d8408f7c1d50e8a3232e6f7ce6d1f7f659110265
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
@@ -472,6 +571,8 @@ Python3 變數命名規則與關鍵字
 程式前後變數命名方式盡量一致, 例如: 使用 rect_length 或 RectLength
 用底線開頭的變數通常具有特殊意義
 
+<<<<<<< HEAD
+=======
 print 函式
 ---
 print() 為 Python 程式語言中用來列印數值或字串的函式, 其中有 sep 變數定義分隔符號, sep 內定為 ",", end 變數則用來定義列印結尾的符號, end 內定為跳行符號
@@ -487,18 +588,20 @@ print() 為 Python 程式語言中用來列印數值或字串的函式, 其中�
 
 ![for-1][]
 
+>>>>>>> d8408f7c1d50e8a3232e6f7ce6d1f7f659110265
 
 
 計算機中的迴圈
 
 ![for][]
 
-[for-1]: ./images/for-1.png {#fig:簡單迴圈}
-[for]: ./images/for.png {#fig:迴圈}
 
 
+print 函式
+---
 
-
+重複迴圈
+---
 
 判斷式
 ---
@@ -545,19 +648,20 @@ Calculator 程式細部說明
 </t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
+
 step1
 
 ![newproject][]
 step2
 
-![newform][]
+ ![newform][]
 
 step3
 
 ![mk][]
 step4
 
-![Dialog into ui][]
+ ![Dialog into ui][]
 
 step5
 
@@ -570,9 +674,15 @@ step5
 [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
 
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
 
+[newproject]: ./images/newproject.png {#fig:表單}
 
+[newform]: ./images/newform.png {#fig:新建}
 
+[mk]: ./images/mk.png {#fig:建立}
+
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
 
 </t>
 <t tx="yen.20170429215922.1">心得
@@ -583,17 +693,37 @@ step5
 @others</t>
 <t tx="yen.20170429220001.1">Fossil SCM
 ---
+40623220蔡崇廷
 
+學習到如何用指令維護倉儲還有wiki和timeline使用
 網誌心得
 ---
+40623220蔡崇廷
 
+將自己每周的學習進度記錄在網誌上,能夠為自己的學習能夠有個回想
 Github 協同倉儲
 ---
+40623220蔡崇廷
+
+學到如何在github建立倉儲,也學到如何與其他人協同做報告跟計算機的專題,也知道有衝突時該如何解決
 
 學員心得
 ---
+40623220蔡崇廷
 
-說明各學員任務與執行過程</t>
+從一開始的不知道這節課要幹嘛漸漸的進入狀況也能每周把自己的學習做個紀錄
+
+
+說明各學員任務與執行過程
+40623220蔡崇廷
+
+做計算機和報告不像前七周是自己做自己的而現在是必須與同學協同所以更需要討論也必須更注意排版不然一定會亂掉
+
+
+
+
+
+</t>
 <t tx="yen.20170429220128.1">結論
 ===
 
