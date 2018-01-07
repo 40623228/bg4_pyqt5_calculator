@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Y:\123\github\bg4_pyqt5_calculator\final_project\ui\Dialog.ui'
-# Form implementation generated from reading ui file 'Y:\tmp\github\bg4_pyqt5_calculator\final_project\ui\Dialog.ui'
-
+# Form implementation generated from reading ui file 'Y:\tmp\git\bg4\final_project\ui\Dialog.ui'
 #
 # Created by: PyQt5 UI code generator 5.9
 #
@@ -187,14 +185,14 @@ class Ui_Dialog(object):
         self.pointButton.setFont(font)
         self.pointButton.setObjectName("pointButton")
         self.gridLayout.addWidget(self.pointButton, 5, 2, 1, 1)
-        self.pushButton_20 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_20.setMinimumSize(QtCore.QSize(50, 50))
-        self.pushButton_20.setMaximumSize(QtCore.QSize(50, 50))
+        self.changeSignButton = QtWidgets.QPushButton(Dialog)
+        self.changeSignButton.setMinimumSize(QtCore.QSize(50, 50))
+        self.changeSignButton.setMaximumSize(QtCore.QSize(50, 50))
         font = QtGui.QFont()
         font.setPointSize(15)
-        self.pushButton_20.setFont(font)
-        self.pushButton_20.setObjectName("pushButton_20")
-        self.gridLayout.addWidget(self.pushButton_20, 5, 3, 1, 1)
+        self.changeSignButton.setFont(font)
+        self.changeSignButton.setObjectName("changeSignButton")
+        self.gridLayout.addWidget(self.changeSignButton, 5, 3, 1, 1)
         self.plusButton = QtWidgets.QPushButton(Dialog)
         self.plusButton.setMinimumSize(QtCore.QSize(50, 50))
         self.plusButton.setMaximumSize(QtCore.QSize(50, 50))
@@ -270,7 +268,7 @@ class Ui_Dialog(object):
         self.addToMemoryButton.setText(_translate("Dialog", "M+"))
         self.zero.setText(_translate("Dialog", "0"))
         self.pointButton.setText(_translate("Dialog", "."))
-        self.pushButton_20.setText(_translate("Dialog", "+-"))
+        self.changeSignButton.setText(_translate("Dialog", "+-"))
         self.plusButton.setText(_translate("Dialog", "+"))
         self.equalButton.setText(_translate("Dialog", "="))
         self.backspaceButton.setText(_translate("Dialog", "Backspace"))
