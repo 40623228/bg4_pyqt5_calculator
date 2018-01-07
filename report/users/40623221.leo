@@ -61,10 +61,17 @@
 <v t="leo.20180108015404.5"><vh>new:Python 程式語法介紹</vh></v>
 </v>
 </v>
+<<<<<<< HEAD
 <v t="leo.20180108042731.2" a="E"><vh>Recovered Nodes</vh>
 <v t="leo.20180108042731.3"><vh>Recovered node "摘要" from @clean cover_and_abstract.md</vh>
 <v t="leo.20180108042731.4"><vh>old:摘要</vh></v>
 <v t="leo.20180108042731.5"><vh>new:摘要</vh></v>
+=======
+<v t="leo.20180108040005.1" a="E"><vh>Recovered Nodes</vh>
+<v t="leo.20180108040005.2"><vh>Recovered node "計算機程式內容" from @clean calculator.md</vh>
+<v t="leo.20180108040005.3"><vh>old:計算機程式內容</vh></v>
+<v t="leo.20180108040005.4"><vh>new:計算機程式內容</vh></v>
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
 </v>
 </v>
 </vnodes>
@@ -447,6 +454,7 @@ python的數列是一個[   ]
 [s]: ./images/s.png {#fig:數列}
 
 </t>
+<<<<<<< HEAD
 <t tx="leo.20180108042731.2"></t>
 <t tx="leo.20180108042731.3">(uncached) ahshoe.20170317115820.1
 Diff...
@@ -490,6 +498,549 @@ abstract: |
     本研究的重點在於 ...
 ---
 
+=======
+<t tx="leo.20180108040005.1"></t>
+<t tx="leo.20180108040005.2">(uncached) yen.20170429215851.1
+Diff...
+  建立對話框
+  ---
+  step1
+  
+  ![newproject][]
+  step2
+  
+  ![newform][]
+  
+  step3
+  
+  ![mk][]
+  step4
+  
+  ![Dialog into ui][]
+  
+  step5
+  
+  ![qtdesigner][]
+  
+  [newproject]: ./images/newproject.png {#fig:表單}
+  [newform]: ./images/newform.png {#fig:新建}
+  [mk]: ./images/mk.png {#fig:建立}
+  [Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+  [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+  
+  
+  
+  
+  
+  
+  建立按鈕
+  ---
+  step1
+  
+  ![button][]
+  
+  step2
+  
+  ![grid][]
+  
+  以上是由Qtdesigner製作
+  
+  Qtdesigner詳細請查閱第五章
+  
+  [button]: ./images/button.png {#fig:格子}
+  [grid]: ./images/grid.png {#fig:排版}
+  
+  建立程式碼
+  ---
+  __40623220__
+  
+- *
+  
+- 乘除
+  
+- ![mult][]
+- 
+- 變號
+- 
+- ![change][]
+- 
+- 計算
+- 
+- ![calculator][]
+- 
+- 中斷運算
+- 
+- ![abo][]
+  
+  
+  __40623221__
+      def unaryOperatorClicked(self):
+  #40623221
+          '''單一運算元按下後處理方法'''
+          #pass
+          clickedButton = self.sender()
+          clickedOperator = clickedButton.text()
+          operand = float(self.display.text())
+  
+          if clickedOperator == "Sqrt":
+              if operand &lt; 0.0:
+                  self.abortOperation()
+                  return
+  
+              result = math.sqrt(operand)
+          elif clickedOperator == "X^2":
+              result = math.pow(operand, 2.0)
+          elif clickedOperator == "1/x":
+              if operand == 0.0:
+                  self.abortOperation()
+                  return
+  
+              result = 1.0 / operand
+  
+          self.display.setText(str(result))
+          self.waitingForOperand = True
+-         
+          說明:按下1/x若分母為0則需中斷運算,若按下Sqrt且數字小於0也是中斷運算,
+          按下X^2若數字為2則需運算2的平方..
+          
+          def pointClicked(self):
+  #40623221
+          '''小數點按下.後的處理方法'''
+          #pass
+          if self.waitingForOperand:
+              self.display.setText('0')
+   
+          if "." not in self.display.text():
+              self.display.setText(self.display.text() + ".")
+   
+          self.waitingForOperand = False
+-         
+          說明:若出現display,且在數字0後面沒出現小數點則將小數點顯示出來..
+          
+           def clearAll(self):
+  #40623221
+          '''全部清除鍵按下後的處理方法'''
+          #pass
+          self.sumSoFar = 0.0
+          self.factorSoFar = 0.0
+          self.pendingAdditiveOperator = ''
+          self.pendingMultiplicativeOperator = ''
+          self.display.setText('0')
+          self.waitingForOperand = True
+-         
+          說明:按下clearall則把全部運算停止並將全部情除最後出現0
+          
+  
+  
+  
+  
+  __40623228__
+  
+  
+  
+  
+  
+  
+  
+  __40623229__
+  
+  
+  
+  
+  
+  
+  
+  __40623230__
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+- [mult]: ./images/mult.png {#fig:乘除}
+- [change]: ./images/change.png {#fig:變號}
+- [calculator]: ./images/calculator.png {#fig:計算}
+- [abo]: ./images/abo.png {#fig:中斷運算}
+  
++ 
++ 
+</t>
+<t tx="leo.20180108040005.3">建立對話框
+---
+step1
+
+![newproject][]
+step2
+
+![newform][]
+
+step3
+
+![mk][]
+step4
+
+![Dialog into ui][]
+
+step5
+
+![qtdesigner][]
+
+[newproject]: ./images/newproject.png {#fig:表單}
+[newform]: ./images/newform.png {#fig:新建}
+[mk]: ./images/mk.png {#fig:建立}
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+
+
+
+
+
+
+建立按鈕
+---
+step1
+
+![button][]
+
+step2
+
+![grid][]
+
+以上是由Qtdesigner製作
+
+Qtdesigner詳細請查閱第五章
+
+[button]: ./images/button.png {#fig:格子}
+[grid]: ./images/grid.png {#fig:排版}
+
+建立程式碼
+---
+__40623220__
+
+
+
+
+
+__40623221__
+    def unaryOperatorClicked(self):
+#40623221
+        '''單一運算元按下後處理方法'''
+        #pass
+        clickedButton = self.sender()
+        clickedOperator = clickedButton.text()
+        operand = float(self.display.text())
+
+        if clickedOperator == "Sqrt":
+            if operand &lt; 0.0:
+                self.abortOperation()
+                return
+
+            result = math.sqrt(operand)
+        elif clickedOperator == "X^2":
+            result = math.pow(operand, 2.0)
+        elif clickedOperator == "1/x":
+            if operand == 0.0:
+                self.abortOperation()
+                return
+
+            result = 1.0 / operand
+
+        self.display.setText(str(result))
+        self.waitingForOperand = True
+        說明:按下1/x若分母為0則需中斷運算,若按下Sqrt且數字小於0也是中斷運算,
+        按下X^2若數字為2則需運算2的平方..
+        
+        def pointClicked(self):
+#40623221
+        '''小數點按下.後的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            self.display.setText('0')
+ 
+        if "." not in self.display.text():
+            self.display.setText(self.display.text() + ".")
+ 
+        self.waitingForOperand = False
+        說明:若出現display,且在數字0後面沒出現小數點則將小數點顯示出來..
+        
+         def clearAll(self):
+#40623221
+        '''全部清除鍵按下後的處理方法'''
+        #pass
+        self.sumSoFar = 0.0
+        self.factorSoFar = 0.0
+        self.pendingAdditiveOperator = ''
+        self.pendingMultiplicativeOperator = ''
+        self.display.setText('0')
+        self.waitingForOperand = True
+        說明:按下clearall則把全部運算停止並將全部情除最後出現0
+        
+
+
+
+
+__40623228__
+
+
+
+
+
+
+
+__40623229__
+
+
+
+
+
+
+
+__40623230__
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</t>
+<t tx="leo.20180108040005.4">建立對話框
+---
+step1
+
+![newproject][]
+step2
+
+![newform][]
+
+step3
+
+![mk][]
+step4
+
+![Dialog into ui][]
+
+step5
+
+![qtdesigner][]
+
+[newproject]: ./images/newproject.png {#fig:表單}
+[newform]: ./images/newform.png {#fig:新建}
+[mk]: ./images/mk.png {#fig:建立}
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
+[qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
+
+
+
+
+
+
+建立按鈕
+---
+step1
+
+![button][]
+
+step2
+
+![grid][]
+
+以上是由Qtdesigner製作
+
+Qtdesigner詳細請查閱第五章
+
+[button]: ./images/button.png {#fig:格子}
+[grid]: ./images/grid.png {#fig:排版}
+
+建立程式碼
+---
+__40623220__
+
+*
+
+乘除
+
+![mult][]
+
+變號
+
+![change][]
+
+計算
+
+![calculator][]
+
+中斷運算
+
+![abo][]
+
+
+__40623221__
+    def unaryOperatorClicked(self):
+#40623221
+        '''單一運算元按下後處理方法'''
+        #pass
+        clickedButton = self.sender()
+        clickedOperator = clickedButton.text()
+        operand = float(self.display.text())
+
+        if clickedOperator == "Sqrt":
+            if operand &lt; 0.0:
+                self.abortOperation()
+                return
+
+            result = math.sqrt(operand)
+        elif clickedOperator == "X^2":
+            result = math.pow(operand, 2.0)
+        elif clickedOperator == "1/x":
+            if operand == 0.0:
+                self.abortOperation()
+                return
+
+            result = 1.0 / operand
+
+        self.display.setText(str(result))
+        self.waitingForOperand = True
+        
+        說明:按下1/x若分母為0則需中斷運算,若按下Sqrt且數字小於0也是中斷運算,
+        按下X^2若數字為2則需運算2的平方..
+        
+        def pointClicked(self):
+#40623221
+        '''小數點按下.後的處理方法'''
+        #pass
+        if self.waitingForOperand:
+            self.display.setText('0')
+ 
+        if "." not in self.display.text():
+            self.display.setText(self.display.text() + ".")
+ 
+        self.waitingForOperand = False
+        
+        說明:若出現display,且在數字0後面沒出現小數點則將小數點顯示出來..
+        
+         def clearAll(self):
+#40623221
+        '''全部清除鍵按下後的處理方法'''
+        #pass
+        self.sumSoFar = 0.0
+        self.factorSoFar = 0.0
+        self.pendingAdditiveOperator = ''
+        self.pendingMultiplicativeOperator = ''
+        self.display.setText('0')
+        self.waitingForOperand = True
+        
+        說明:按下clearall則把全部運算停止並將全部情除最後出現0
+        
+
+
+
+
+__40623228__
+
+
+
+
+
+
+
+__40623229__
+
+
+
+
+
+
+
+__40623230__
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[mult]: ./images/mult.png {#fig:乘除}
+[change]: ./images/change.png {#fig:變號}
+[calculator]: ./images/calculator.png {#fig:計算}
+[abo]: ./images/abo.png {#fig:中斷運算}
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
 
 </t>
 <t tx="yen.20170429103742.1"></t>
@@ -739,17 +1290,24 @@ __40623220__
 
 ![mult][]
 
+變號
 
+<<<<<<< HEAD
 __40623221__
 =======
 變號
 
+=======
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
 ![change][]
 
 計算
 
 ![calculator][]
+<<<<<<< HEAD
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; d8408f7c1d50e8a3232e6f7ce6d1f7f659110265
+=======
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
 
 中斷運算
 
@@ -873,12 +1431,18 @@ __40623230__
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
 [mult]: ./images/mult.png {#fig:乘除}
 [change]: ./images/change.png {#fig:變號}
 [calculator]: ./images/calculator.png {#fig:計算}
 [abo]: ./images/abo.png {#fig:中斷運算}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
 
 </t>
 <t tx="yen.20170429215922.1">心得
@@ -890,22 +1454,42 @@ __40623230__
 </t>
 <t tx="yen.20170429220001.1">Fossil SCM
 ---
+<<<<<<< HEAD
 40623220 蔡崇廷
 學習到如何用指令維護倉儲還有 wiki 和 timeline 使用
 
 40623221  蔡和勳
 fossil 是比較簡單的一些指令
 所以一開始我們已fossil當基礎練習了半學期將指令弄熟了其實跟github的指令是大同小異
+=======
+40623220蔡崇廷
+
+學習到如何用指令維護倉儲還有wiki和timeline使用
+
+40623221 蔡和勳 
+
+fossil 是比較簡單的一些指令所以一開始我們已fossil 當基礎練習了半學期將指令弄熟了其實跟 github 的指令是大同小異
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
 
 40623228  陳永錩
 Fossil使用起來比之前用雲端軟體的效率及感覺 有很大的不一樣以版次來說能夠在每次都能做成一種版次就比雲端更可以處存自己設計的東西
 
 網誌心得
+<<<<<<< HEAD
 --
 40623220 蔡崇廷
 將自己每周的學習進度記錄在網誌上, 能夠為自己的學習能夠有個回想
 
 40623221 蔡和勳
+=======
+---
+40623220蔡崇廷
+
+將自己每周的學習進度記錄在網誌上,能夠為自己的學習能夠有個回想
+
+40623221 蔡和勳
+
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
 將平常上課所學的指令及程式碼運用讓自己的網誌可以更新
 
 40623228  陳永錩
@@ -913,18 +1497,30 @@ Fossil使用起來比之前用雲端軟體的效率及感覺 有很大的不一�
 
 Github 協同倉儲
 ---
+<<<<<<< HEAD
 40623220 蔡崇廷
 學到如何在 github 建立倉儲, 也學到如何與其他人協同做報告跟計算機的專題, 也
 知道有衝突時該如何解決
 
 40623221  蔡和勳
 透過與組員一起寫計算機程式能更快解決問題,協同報告可以自動編排也很方便,不用再將文字檔拉來拉去
+=======
+40623220蔡崇廷
+
+學到如何在github建立倉儲,也學到如何與其他人協同做報告跟計算機的專題,也知道有衝突時該如何解決
+
+40623221 蔡和勳
+
+透過與組員一起寫計算機程式能更快解決問題, 協同報告可以自動編排也很方便, 不用再將文字檔拉來拉去
+
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
 
 40623228  陳永錩
 雖然說跟Fossil一樣是SCM的東西可是加上了多人協同就有很大的不能像是怎麼解決衝突等等
 
 學員心得
 ---
+<<<<<<< HEAD
 40623220 蔡崇廷
 從一開始的不知道這節課要幹嘛漸漸的進入狀況也能每周把自己的學習做個紀錄
 
@@ -950,6 +1546,28 @@ Github 協同倉儲
 
 40623228  陳永錩
 必須將流程已有條理的方式 逐步的完成不然很容易亂了手腳</t>
+=======
+40623220蔡崇廷
+
+從一開始的不知道這節課要幹嘛漸漸的進入狀況也能每周把自己的學習做個紀錄
+
+40623221 蔡和勳
+雖然程式碼很多很嚇人, 但是如果有看老師教學影片就可以很快進入狀況可以學很快, 自己在花點時間就可以將程式完成
+
+說明各學員任務與執行過程
+
+40623220蔡崇廷
+
+做計算機和報告不像前七周是自己做自己的而現在是必須與同學協同所以更需要討論也必須更注意排版不然一定會亂掉
+
+40623221 蔡和勳
+組員所負責的計算機程式內容不一樣若前面的按鈕和排版沒做好後面就沒辦法接下去做, 還有按鈕名稱也很重要, 錯誤的話會沒辦法執行計畫
+
+
+
+
+</t>
+>>>>>>> 10fd785101553c1d9475f9c0d42dc189fbcc039a
 <t tx="yen.20170429220128.1">結論
 ===
 
@@ -957,8 +1575,7 @@ Github 協同倉儲
 
 @others</t>
 <t tx="yen.20170429220137.1">結論與建議
----40623221  蔡和勳
-在這堂課學到如何運用自己的時間以及倉儲編輯還有fossil和github的相關指令,還知道隨身系統搞好只要帶著隨身碟不管到哪裡都可以工作
+
 
 結論與建議內容</t>
 <t tx="yen.20170429220335.1">附錄
