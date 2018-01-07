@@ -7,7 +7,7 @@ title_en: 'PyQt5 Event-Driven Calculator Project'
 author:
 - 設計一乙 40623219 XXX
 - 設計一乙 40623220 蔡崇廷
-- 設計一乙 40623221 XXX
+- 設計一乙 40623221 蔡和勳
 - 設計一乙 40623228 陳永錩
 - 設計一乙 40623229 陳宥安
 - 設計一乙 40623230 陳柏亦
@@ -17,14 +17,12 @@ date: '2017.12.18'
 
 ---
 abstract: |
-    這裡是摘要內容。A pipe character, followed by an indented block of text is treated as a literal block, in which newlines are preserved throughout the block, including the final newline.
+    + 使用可以程式系統進行作業
+    + 利用github作為協同倉儲
+    + 了解並解釋Python、PyQt5語法
+    + 了解計算器程式內容
+    + 將問題解決合作完成報告
     
-    + 以 YAML 的方式插入。
-    + The '+' indicator says to keep newlines at the end of text blocks.
-    + 使用 Markdown 語法。
-    + 前面使用加號
-    
-    本研究的重點在於 ...
 ---
 
 
