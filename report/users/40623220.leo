@@ -38,7 +38,6 @@
 </v>
 <v t="yen.20170429215617.1" a="E"><vh>@clean calculator.md</vh>
 <v t="yen.20170429215851.1"><vh>計算機程式內容</vh></v>
-<v t="leo.20180107183708.1"><vh>計算機程式內容</vh></v>
 <v t="leo.20180107183709.1"><vh>計算機程式內容</vh></v>
 </v>
 <v t="yen.20170429215922.1" a="E"><vh>計算機程式內容</vh>
@@ -258,27 +257,84 @@ Table: 價目表 {#tbl:價目表}
 [http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
 
 </t>
-<t tx="leo.20180107183708.1">
-建立按鈕
+<t tx="leo.20180107183709.1">建立按鈕
 ---
+step1
+
 ![button][]
 
-[button]: ./images/button.png {#fig:格子}
-
+step2
 
 ![grid][]
 
+以上是由Qtdesigner製作
+
+Qtdesigner詳細請查閱第五章
+
+[button]: ./images/button.png {#fig:格子}
 [grid]: ./images/grid.png {#fig:排版}
-
-
-![QTDialog][]
-
-[QTDialog]: ./images/QTDialog.png {#fig:完成按鈕}
-</t>
-<t tx="leo.20180107183709.1">
 
 建立程式碼
 ---
+__40623220__
+
+
+
+
+
+__40623221__
+
+
+
+
+
+__40623228__
+
+
+
+
+
+
+
+__40623229__
+
+
+
+
+
+
+
+__40623230__
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -320,18 +376,35 @@ Python 程式語法
 @others</t>
 <t tx="yen.20170429215308.1">變數命名
 ---
+Python3 變數命名規則與關鍵字
 
-IPv4 的內容
+一、Python 英文變數命名規格
 
-有一張圖片：
+1.變數必須以英文字母大寫或小寫或底線開頭
 
-![Kmol][]
+2.變數其餘字元可以是英文大小寫字母, 數字或底線
 
-稱為圖 {@fig:駱駝}。
+3.變數區分英文大小寫
 
-各 md 檔案可以在 images 目錄下自訂與 md 檔案名稱相同的子目錄存放影像檔案
+4.變數不限字元長度
 
-[Kmol]: ./images/kmol.png {#fig:駱駝}
+5.不可使用關鍵字當作變數名稱
+
+二、Python3 的程式關鍵字, 使用者命名變數時, 必須避開下列保留字.
+
+1.Python keywords: ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+2.選擇好的變數名稱:
+
+使用有意義且適當長度的變數名稱， 例如: 使用 length 代表長度, 不要單獨使用 l 或 L, 也不要使用 this_is_the_length
+程式前後變數命名方式盡量一致, 例如: 使用 rect_length 或 RectLength
+用底線開頭的變數通常具有特殊意義
+
+
+
+
+
+
 
 print 函式
 ---
@@ -352,30 +425,29 @@ Calculator 程式細部說明
 @others</t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
-![newproject][]
+step1
 
-[newproject]: ./images/newproject.png {#fig:表單}
+![newproject][]
+step2
 
 ![newform][]
 
-[newform]: ./images/newform.png {#fig:新建}
+step3
 
 ![mk][]
-
-[mk]: ./images/mk.png {#fig:建立}
+step4
 
 ![Dialog into ui][]
 
-[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
-
+step5
 
 ![qtdesigner][]
 
+[newproject]: ./images/newproject.png {#fig:表單}
+[newform]: ./images/newform.png {#fig:新建}
+[mk]: ./images/mk.png {#fig:建立}
+[Dialog into ui]: ./images/Dialog into ui.png {#fig:放入}
 [qtdesigner]: ./images/qtdesigner.png {#fig:對話框}
-
-
-
-
 
 
 
