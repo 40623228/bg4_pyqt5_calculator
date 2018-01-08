@@ -1,0 +1,29 @@
+\contentsline {chapter}{摘要}{i}{chapter*.1}
+\contentsline {chapter}{目錄}{ii}{chapter*.2}
+\contentsline {chapter}{表目錄}{iii}{chapter*.3}
+\contentsline {chapter}{圖目錄}{iv}{chapter*.4}
+\contentsline {chapter}{\numberline {第\CJKnumber {1}章}前言}{1}{chapter.1}
+\contentsline {chapter}{\numberline {第\CJKnumber {2}章}可攜程式系統介紹}{2}{chapter.2}
+\contentsline {section}{\numberline {{2}.1}啟動與關閉}{2}{section.2.1}
+\contentsline {section}{\numberline {{2}.2}啟動與關閉2}{3}{section.2.2}
+\contentsline {chapter}{\numberline {第\CJKnumber {3}章}Calculator 程式}{4}{chapter.3}
+\contentsline {section}{\numberline {{3}.1}建立對話框}{4}{section.3.1}
+\contentsline {section}{\numberline {{3}.2}建立按鈕}{6}{section.3.2}
+\contentsline {section}{\numberline {{3}.3}建立程式碼}{7}{section.3.3}
+\contentsline {chapter}{\numberline {第\CJKnumber {4}章}Python 程式語法}{14}{chapter.4}
+\contentsline {section}{\numberline {{4}.1}變數命名}{14}{section.4.1}
+\contentsline {section}{\numberline {{4}.2}print 函式}{15}{section.4.2}
+\contentsline {section}{\numberline {{4}.3}重複迴圈}{15}{section.4.3}
+\contentsline {section}{\numberline {{4}.4}判斷式}{15}{section.4.4}
+\contentsline {section}{\numberline {{4}.5}數列}{15}{section.4.5}
+\contentsline {chapter}{\numberline {第\CJKnumber {5}章}PyQt5 簡介}{17}{chapter.5}
+\contentsline {section}{\numberline {{5}.1}PyQt5 架構}{17}{section.5.1}
+\contentsline {chapter}{\numberline {第\CJKnumber {6}章}心得}{18}{chapter.6}
+\contentsline {section}{\numberline {{6}.1}Fossil SCM}{18}{section.6.1}
+\contentsline {section}{\numberline {{6}.2}網誌心得}{18}{section.6.2}
+\contentsline {section}{\numberline {{6}.3}Github 協同倉儲}{19}{section.6.3}
+\contentsline {section}{\numberline {{6}.4}學員心得}{19}{section.6.4}
+\contentsline {section}{\numberline {{6}.5}說明各學員任務與執行過程}{20}{section.6.5}
+\contentsline {chapter}{\numberline {第\CJKnumber {7}章}結論}{21}{chapter.7}
+\contentsline {chapter}{\numberline {第\CJKnumber {8}章}參考文獻}{22}{chapter.8}
+\contentsfinish 

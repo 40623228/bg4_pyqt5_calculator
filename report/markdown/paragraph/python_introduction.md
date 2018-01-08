@@ -29,26 +29,27 @@ Python3 變數命名規則與關鍵字
 程式前後變數命名方式盡量一致, 例如: 使用 rect_length 或 RectLength
 用底線開頭的變數通常具有特殊意義
 
+print 函式
+---
+
+print() 為 Python 程式語言中用來列印數值或字串的函式, 其中有 sep 變數定義分隔符號, sep 內定為 ",", end 變數則用來定義列印結尾的符號, end 內定為跳行符號
+
+![print][]
 
 
 
+重複迴圈
+---
 
+簡單的迴圈
+
+![for-1][]
 
 計算機中的迴圈
 
 ![for][]
 
-[for-1]: ./images/for-1.png {#fig:簡單迴圈}
-[for]: ./images/for.png {#fig:迴圈}
 
-
-
-
-print 函式
----
-
-重複迴圈
----
 
 判斷式
 ---
@@ -71,6 +72,7 @@ else:
 
 3.最後的else可以不用加
 
+
 數列
 ---
 python的數列是一個[   ]
@@ -84,4 +86,6 @@ python的數列是一個[   ]
 ![s][]
 
 [s]: ./images/s.png {#fig:數列}
-
+[for-1]: ./images/for-1.png {#fig:簡單迴圈}
+[print]: ./images/print.png {#fig:列印}
+[for]: ./images/for.png {#fig:迴圈}

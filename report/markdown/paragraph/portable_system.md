@@ -1,7 +1,8 @@
-
-
 可攜程式系統介紹
 ===
+
+可攜程式系統介紹
+
 啟動與關閉
 ---
 ![system-1]
@@ -32,5 +33,8 @@ DiaPortable-可繪製圖形幫助註解圖片
 
 [system-1]: ./images/system-1.png {#fig:格子}
 [system-2]: ./images/system-2.png {#fig:格子}
+
+
+
 可攜程式系統介紹
 

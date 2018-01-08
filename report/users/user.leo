@@ -99,7 +99,7 @@ g.es('-'*12)</t>
 <t tx="ahshoe.20161120122151.1">---
 university_zh: '國立虎尾科技大學'
 institute_zh: '機械設計工程系'
-category_zh: '計算機程式 bg4 期末報告'
+category_zh: '計算機程式 bg1 期末報告'
 title_zh: 'PyQt5 事件導向計算器'
 title_en: 'PyQt5 Event-Driven Calculator Project'
 author:
@@ -109,6 +109,7 @@ author:
 - 設計一乙 40623228 陳永錩
 - 設計一乙 40623229 陳宥安
 - 設計一乙 40623230 陳柏亦
+
 advisor_zh: '嚴家銘'
 date: '2017.12.18'
 ---
@@ -193,12 +194,13 @@ vertical: body pane on the botton</t>
 <t tx="ahshoe.20170317115820.1">---
 abstract: |
     這裡是摘要內容。
-    + 以 YAML 的方式插入。
-    + The '+' indicator says to keep newlines at the end of text blocks.
-    + 使用 Markdown 語法。
-    + 前面使用加號
     
-    本研究的重點在於 ...
+    + 使用可以程式系統進行作業
+    + 利用github作為協同倉儲
+    + 了解並解釋Python、PyQt5語法
+    + 了解計算器程式內容
+    + 將問題解決合作完成報告
+    
 ---
 
 
@@ -233,27 +235,18 @@ abstract: |
 計算器程式期末報告前言
 
 @others</t>
-<t tx="yen.20170429214838.3">前言內容。
+<t tx="yen.20170429214838.3">
+   因期末需製作報告，目的是為了瞭解程式語法，在製作途中學習使用共同倉儲，解決上傳的衝突，以上學到的在未來出社會當工程師是非常重要的基楚。
 
-\ 
 
-一個範例數學式：$$\beta=\cos^{-1}{\frac{L0^{2}+d_{AB}^{2}-R0^{2}}{2\times{L0\times{d_{AB}}}}}$$
-
-\ 
-
-關於數學式可以參考這裡：[http://www.hostmath.com/][]
-
-[http://www.hostmath.com/]: http://www.hostmath.com/
-
-提及了某篇刊物[@myart]在這裡。
 </t>
 <t tx="yen.20170429214845.1"></t>
-<t tx="yen.20170429215041.1">
+<t tx="yen.20170429215041.1">可攜程式系統介紹
+===
 
 可攜程式系統介紹
-===
-@others
-</t>
+
+@others</t>
 <t tx="yen.20170429215130.1">啟動與關閉
 ---
 ![system-1]
@@ -284,6 +277,9 @@ DiaPortable-可繪製圖形幫助註解圖片
 
 [system-1]: ./images/system-1.png {#fig:格子}
 [system-2]: ./images/system-2.png {#fig:格子}
+
+
+
 可攜程式系統介紹
 
 </t>
@@ -292,8 +288,7 @@ DiaPortable-可繪製圖形幫助註解圖片
 
 Python 程式語法
 
-@others
-</t>
+@others</t>
 <t tx="yen.20170429215308.1">變數命名
 ---
 Python3 變數命名規則與關鍵字
@@ -320,26 +315,27 @@ Python3 變數命名規則與關鍵字
 程式前後變數命名方式盡量一致, 例如: 使用 rect_length 或 RectLength
 用底線開頭的變數通常具有特殊意義
 
+print 函式
+---
+
+print() 為 Python 程式語言中用來列印數值或字串的函式, 其中有 sep 變數定義分隔符號, sep 內定為 ",", end 變數則用來定義列印結尾的符號, end 內定為跳行符號
+
+![print][]
 
 
 
+重複迴圈
+---
 
+簡單的迴圈
+
+![for-1][]
 
 計算機中的迴圈
 
 ![for][]
 
-[for-1]: ./images/for-1.png {#fig:簡單迴圈}
-[for]: ./images/for.png {#fig:迴圈}
 
-
-
-
-print 函式
----
-
-重複迴圈
----
 
 判斷式
 ---
@@ -362,6 +358,7 @@ else:
 
 3.最後的else可以不用加
 
+
 數列
 ---
 python的數列是一個[   ]
@@ -375,15 +372,15 @@ python的數列是一個[   ]
 ![s][]
 
 [s]: ./images/s.png {#fig:數列}
-
-</t>
+[for-1]: ./images/for-1.png {#fig:簡單迴圈}
+[print]: ./images/print.png {#fig:列印}
+[for]: ./images/for.png {#fig:迴圈}</t>
 <t tx="yen.20170429215416.1"> PyQt5 簡介
 ===
 
 說明 PyQt5 基本架構與程式開發流程
 
-@others
-</t>
+@others</t>
 <t tx="yen.20170429215446.2">PyQt5 架構
 ---
 PyQt5-GUI frame work , 圖形使用者介面軟體框架 ,可以快速製做GUI界面程式 , 
@@ -400,8 +397,7 @@ PyQt同樣支援這種方法。
 
 Calculator 程式細部說明
 
-@others
-</t>
+@others</t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
 
@@ -459,6 +455,7 @@ Qtdesigner詳細請查閱第五章
 
 建立程式碼
 ---
+
 __40623220__
 
 *
@@ -468,7 +465,6 @@ __40623220__
 ![mult][]
 
 
-__40623221__
 變號
 
 ![change][]
@@ -477,12 +473,19 @@ __40623221__
 
 ![calculator][]
 
+
 中斷運算
 
 ![abo][]
 
 
+
+
+
+
 __40623221__
+    
+    
     def unaryOperatorClicked(self):
 #40623221
         '''單一運算元按下後處理方法'''
@@ -557,54 +560,99 @@ __40623228__
 ![equalClicked]
 
 __40623229__
-
-
-
-
-
-
+        '''回復鍵按下的處理方法'''
+         #pass
+         if self.waitingForOperand:
+             return
+  
+         text = self.display.text()[:-1]
+         if not text:
+             text = '0'
+             self.waitingForOperand = True
+  
+         self.display.setText(text)
+         if self.waitingForOperand:
+             return
+     def clear(self):
+      
+       '''清除鍵按下後的處理方法'''
+         #pass
+         if self.waitingForOperand:
+             return
+  
+         self.display.setText('0')
+         
+         self.waitingForOperand = True
 
 __40623230__
 
-
+    def clearMemory(self):
+#40623230
+        '''清除記憶體鍵按下後的處理方法'''
+        #pass
+        self.sumInMemory = 0.0
+        
+        說明:按下MC鍵後將記憶的數字變為0
+        
+    def readMemory(self):
+#40623230
+        '''讀取記憶體鍵按下後的處理方法'''
+        #pass
+        self.display.setText(str(self.sumInMemory))
+        self.waitingForOperand = True
+        
+        說明:按下MR鍵後把記憶的數字顯示出來
+        
+    def setMemory(self):
+#40623230
+        '''設定記憶體鍵按下後的處理方法'''
+        #pass
+        self.equalClicked()
+        self.sumInMemory = float(self.display.text())
+        
+        說明:按下MS鍵後會把當前的數字取代記憶的數字
+        
+    def addToMemory(self):
+#40623230
+        '''放到記憶體鍵按下後的處理方法'''
+        #pass
+        self.equalClicked()
+        self.sumInMemory += float(self.display.text())
+        
+        說明:按下M+鍵會把當前數字與記憶的數字相加後並記憶
 
 
 
 [equalClicked]: ./images/equalClicked.png {#fig:equalClicked}
 [additiveOperatorCliked]: ./images/additiveOperatorCliked.png {#fig:additiveOperatorCliked}
 [digitCilcked]: ./images/digitCilcked.png {#fig:digitCilcked}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [mult]: ./images/mult.png {#fig:乘除}
 [change]: ./images/change.png {#fig:變號}
 [calculator]: ./images/calculator.png {#fig:計算}
 [abo]: ./images/abo.png {#fig:中斷運算}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </t>
@@ -613,11 +661,9 @@ __40623230__
 
 期末報告心得
 
-@others
-</t>
+@others</t>
 <t tx="yen.20170429220001.1">Fossil SCM
 ---
-
 40623220蔡崇廷
 
 學習到如何用指令維護倉儲還有wiki和timeline使用
@@ -625,10 +671,16 @@ __40623230__
 40623221 蔡和勳 
 
 fossil 是比較簡單的一些指令所以一開始我們已fossil 當基礎練習了半學期將指令弄熟了其實跟 github 的指令是大同小異
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 10fd785101553c1d9475f9c0d42dc189fbcc039a
 
 40623228  陳永錩
 Fossil使用起來比之前用雲端軟體的效率及感覺 有很大的不一樣以版次來說能夠在每次都能做成一種版次就比雲端更可以處存自己設計的東西
+
+40623229 陳宥安
+ 剛開始第一次接觸fossil完完全全不知道在搞啥也不知道做甚麼用的用在哪裡
+ 摸了兩個禮拜才懂得一些皮毛而已，後來經過老師講解才得以將前後串起來
+ 
+40623230陳柏亦
+fossil學習到的近遠端的倉儲維護還有版次處理
 
 網誌心得
 ---
@@ -643,6 +695,13 @@ Fossil使用起來比之前用雲端軟體的效率及感覺 有很大的不一�
 40623228  陳永錩
 在每次上課都做一次網誌想筆記一樣 有效的將遇到的問題及學過的東西記錄下來
 
+網誌心得
+ 40623229 陳宥安
+ 將每個禮拜老師的上課內容上傳到自己的網誌
+
+40623230 陳柏亦
+可以將上課的內容記錄下來之後要尋找看便很容易
+
 Github 協同倉儲
 ---
 40623220 蔡崇廷
@@ -655,9 +714,16 @@ Github 協同倉儲
 40623228  陳永錩
 雖然說跟Fossil一樣是SCM的東西可是加上了多人協同就有很大的不能像是怎麼解決衝突等等
 
+Github協同倉儲
+ 40623229 陳宥安
+ 方便的討論如何製作一個報告 不會因為不在同一個地方而無法討論
+ 印證了天涯若比鄰這句話
+
+40623230 陳柏亦
+可以共同協同很方便,更新檔案只要上傳下載就好,不過更新時容易衝突,需要去解決
+
 學員心得
 ---
-
 40623220 蔡崇廷
 從一開始的不知道這節課要幹嘛漸漸的進入狀況也能每周把自己的學習做個紀錄
 
@@ -669,9 +735,16 @@ Github 協同倉儲
 40623228  陳永錩
 在經過整學期的課程我覺得,程式會是必學的一項技能,有了程式的幫忙才可以有效率的完成設計上的事情
 
+ 40623229 陳宥安
+ 這16個禮拜一直處在懵懵懂懂的狀態下，不懂的地方還是很多，反覆了看了影片我相信總有一天會摸出個所以然，下學期希望也一直保持像這學期這樣的好狀態
+
+40623230陳柏亦
+剛開始完全不會到學期末,已經把這學期的都理解的差不多,比起開始已經不太討厭程式了
+
 說明各學員任務與執行過程
 --
 說明各學員任務與執行過程
+
 40623220 蔡崇廷
 做計算機和報告不像前七周是自己做自己的而現在是必須與同學協同所以更需要
 討論也必須更注意排版不然一定會亂掉
@@ -683,18 +756,23 @@ Github 協同倉儲
 
 40623228  陳永錩
 必須將流程已有條理的方式 逐步的完成不然很容易亂了手腳
+
+40623229 陳宥安
+  裏頭的程式語言其實不是很懂，如何能將一整串的文字組在一塊，加上一些符號竟然能夠成為一台計算機，需要的是不停的動腦不停的失敗再試反覆的操作直到完成
+
+40623230陳柏亦
+自己的程序必須要做好,不然可能因為自己的部分有出錯,導致其他人無法完成,所以需要討論好,不然很容易出錯
+
 </t>
 <t tx="yen.20170429220128.1">結論
 ===
 
 期末報告結論
 
-@others
-</t>
+@others</t>
 <t tx="yen.20170429220137.1">結論與建議
 
-
-結論與建議內容
+透過這次的小組期末報告合作，大家學會了使用共同倉儲來協同，理解了許多的語法，在操作上很熟練很多，了解到分工時每一個地方都很重要，必須討論好，若是自己部分有錯誤，會影響到其他人，再進行作業時必須確保不會出錯，這樣才能完成期末報告。
 </t>
 <t tx="yen.20170429220335.1">附錄
 ===
